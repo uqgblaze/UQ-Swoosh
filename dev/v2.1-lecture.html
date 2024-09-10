@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <title>Lecture Content</title>
+  <style>
+    /* Flexbox to split the three containers */
+    .heading-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: auto; /* Adjust based on the height of the SVG */
+      background-color: #51247A;
+	  overflow: hidden;
+		/* Clip the right side to fix some lines */
+		/* top, right, bottom, left */
+		/* This means the element will be clipped 0 pixels from the top, 2 pixels from the right, 0 pixels from the bottom, and 2 pixels from the left. */
+	clip-path: inset(0px 0px 4px 0px);
+	padding-top: 0;
+	padding-left: 0;
+	margin-top: 0;
+	margin-left: 0;
+    }
+
+    .heading-container-left,
+    .heading-container-right {
+      flex: 1; /* Make them take up equal space */
+    }
+
+    /* Ensure SVGs scale properly */
+    .heading-container-left svg,
+    .heading-container-right svg {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+.heading-container-right {
+  flex: 1;
+  /* background-color: red;  Just for testing */
+	z-index: 10;
+}
+    .heading-container-center {
+      flex: 2; /* Give the center more space for the text */
+      text-align: center;
+      color: white;
+    }
+
+    /* Style the h2 and add animation */
+    h2 {
+    margin: 0; /* Remove default margin to perfectly center */
+	font-family: Helvetica, Arial, "sans-serif";
+	font-size: 2em;
+	align-content: center center;
+	text-align: center;
+	text-overflow: ellipsis;
+	color: #fff!important;
+    }
+	  	#cls-1 {
+		fill: #ffffff!important;
+        fill-rule: evenodd!important;
+      } 
+  </style>
+</head>
+<body>
+
+<div class="heading-container" data-aos="fade-in">
+  <!-- Left portion of the SVG -->
+  <div class="heading-container-left">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" preserveAspectRatio="xMinYMin meet">
+      <path class="cls-1" d="M.1759,12.67019l.94049,17.59863c9.62793,90.51685,90.07412,177.81189,199.61193,211.13843h12.6438v.01355H.1759V12.67019H.1759Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+  <!-- Center container with the title -->
+  <div class="heading-container-center" data-aos="fade-up">
+    <h2>Lecture Content</h2>
+  </div>
+
+
+
+<!-- Right portion of the SVG -->
+<div class="heading-container-right">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="480 0 480 240" preserveAspectRatio="xMinYMin meet">
+    <path class="cls-1" d="M960.74746-3.37925h.0285v244.80005h-213.19623v-.01355h213.16772c-24.02972-3.26794-65.89594-21.57336-103.72662-33.02332-42.89709-13.00793-52.42279-4.47449-73.04016,12.90405,4.51501-5.38538,54.00494-53.53406,78.80981-66.58203,48.55505-25.56848,94.77649-3.62744,97.95697-2.54077V-3.37925Z" fill="#FFFFFF"/>
+  </svg>
+</div>
+
+</div>
+
+<!-- Include AOS Library -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+
+</body>
+</html>
