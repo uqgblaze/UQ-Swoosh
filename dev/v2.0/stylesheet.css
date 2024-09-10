@@ -58,7 +58,6 @@
   		/* background-color: red;  Just for testing */
 		z-index: 10; /* Keeps this above everything else */
 		right: 0; /* Align at the bottom-right */
-		max-height: 50%
 	}
     .heading-container-center {
       	flex: 2; /* Give the center more space for the text */
