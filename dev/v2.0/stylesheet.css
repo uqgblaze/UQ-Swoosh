@@ -12,7 +12,7 @@
       	justify-content: space-between; /* Align items at the bottom */
       	position: relative; /* This is the parent container, so it needs relative */
 		width: 100%;
-     	height: auto; /* Adjust based on the height of the SVG */
+     	height: 100%; /* Adjust based on the height of the SVG */
 	min-height: 100px;
 	max-height: 240px;    
       	background-color: #51247A;
