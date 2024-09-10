@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+#uqbs{
+  background-color: #fff;
+  min-height: 80px;
+}
+
+
+.uqh2 {
+    background-color: #51247a;
+    border-bottom-left-radius: 60px 65px;
+	border-right: 0px;
+	height: 100%;
+    font-size: inherit;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #fff;
+	font-weight: bold;
+    text-align: center;
+    padding-top: 1%;
+	padding-bottom: 1%;
+	   animation: fadein 0.5s;
+	   animation-iteration-count: 1;
+       -moz-animation: fadein 0.5s; /* Firefox */
+       -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+       -o-animation: fadein 0.5s; /* Opera */
+	/*trying swoosh*/
+	/* old url: background-image: url("https://articulateusercontent.com/rise/courses/noIXoeHILmBE-WiLJbBz55ZnAs2H8jj2/bb83lz0N_pJCPUZE-background-uq-swoop-2.png"); */
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="480 0 480 240" preserveAspectRatio="xMinYMin meet"><path fill="%23ffffff" d="M960.74746-3.37925h.0285v244.80005h-213.19623v-.01355h213.16772c-24.02972-3.26794-65.89594-21.57336-103.72662-33.02332-42.89709-13.00793-52.42279-4.47449-73.04016,12.90405,4.51501-5.38538,54.00494-53.53406,78.80981-66.58203,48.55505-25.56848,94.77649-3.62744,97.95697-2.54077V-3.37925Z"/></svg>');
+	/* background-clip: border-box;
+	background-origin: border-box; */
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	/* working sizing 
+	background-size: 98px 56px; */
+	background-size: 10% 60%;
+}
+
+div.uqimagebox{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	text-align: center;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+div.uqimagetext{
+	background-color: #fff;
+	color: #000;
+	padding: 10px;
+	font-size: inherit;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+/*.uqswoosh{
+	height: 130px;
+	width: 80px;
+	position: static;
+	bottom: 0px;
+	right: 0px;
+	background-image:"edits/background-uq-swoop-2.png";
+} */
+	.lazy-load{
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+	}
+	.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+#uqbs p{
+		font-family: Helvetica, Arial, "sans-serif";
+		text-rendering: optimizeLegibility;
+	}
+	
+#uqbs b{
+		font-weight: bold;
+		color: #51247a;
+		text-rendering: optimizeLegibility;
+	}
+b{
+	font-weight: bold;
+	color: #51247a;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	text-rendering: optimizeLegibility;
+}
+p{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	text-rendering: optimizeLegibility;
+}
+	
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
