@@ -62,7 +62,10 @@
       	flex: 2; /* Give the center more space for the text */
       	text-align: center;
       	color: #fff;
-		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 20px;
 		}
 
     /* Style the h2 and add animation */
