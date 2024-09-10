@@ -15,7 +15,7 @@
 		left: 0;
 		width: 100%;
      	height: auto; /* Adjust based on the height of the SVG */
-		min-height: 185px;
+		min-height: 160px;
 		max-height: 240px;
       	background-color: #51247A;
 	  	overflow: hidden;
