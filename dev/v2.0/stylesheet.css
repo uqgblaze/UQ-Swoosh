@@ -13,7 +13,7 @@
       	position: relative; /* This is the parent container, so it needs relative */
 		width: 100%;
      	height: 100%; /* Adjust based on the height of the SVG */
-	min-height: 100px;
+	min-height: 180px;
 	max-height: 240px;    
       	background-color: #51247A;
 	  	overflow: hidden;
