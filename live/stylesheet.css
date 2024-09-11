@@ -1,68 +1,140 @@
-body{
-		  min-height: 100px;
-		  max-height: 240px;
-	  }
-  
+@charset "utf-8";
+/* CSS Document */
 
-/* Flexbox to split the three containers */
+  	body{
+		min-height: 100px;
+		max-height: 240px;
+	  }
+    /* Flexbox to split the three containers */
     .heading-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      height: auto; /* Adjust based on the height of the SVG */
-      background-color: #51247A;
-	  overflow: hidden;
-		/* Clip the right side to fix some lines */
-		/* top, right, bottom, left */
-		/* This means the element will be clipped 0 pixels from the top, 2 pixels from the right, 0 pixels from the bottom, and 2 pixels from the left. */
-	clip-path: inset(0px 0px 4px 2px);
-	padding-top: 0;
-	padding-left: 0;
-	margin-top: 0;
-	margin-left: 0;
+      	display: flex;
+     	align-items: center;
+      	justify-content: space-between; /* Align items at the bottom */
+      	position: relative; /* This is the parent container, so it needs relative */
+		top: 0;
+		left: 0;
+		width: 100%;
+     	height: auto; /* Adjust based on the height of the SVG */
+		min-height: 100px;
+		max-height: 240px;
+      	background-color: #51247A;
+	  	overflow: hidden;
+			/* Clip the right side to fix some lines */
+			/* top, right, bottom, left */
+			/* This means the element will be clipped 0 pixels from the top, 0 pixels from the right, 4 pixels from the bottom, and 2 pixels from the left. */
+		clip-path: inset(0px 0px 4px 2px);
+		padding-top: 0;
+		padding-left: 0;
+		margin-top: 0;
+		margin-left: 0;
     }
 
     .heading-container-left,
     .heading-container-right {
-      flex: 1; /* Make them take up equal space */
+      	flex: 1; /* Make them take up equal space */
 		overflow: hidden;
+		/* position: absolute;  This is a child container, so it needs to be absolute - removed as interfereing with flex */
+  		/* bottom: 0;  Ensure the container is aligned at the bottom */
+  		width: 100%; /* Adjust width according to content */
+  		height: auto;
     }
 
     /* Ensure SVGs scale properly */
     .heading-container-left svg,
     .heading-container-right svg {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
+      	width: 100%;
+      	height: auto; /* Keep the aspect ratio intact */
+		min-height: 80%;
+      	object-fit: contain;
     }
-.heading-container-right {
-  flex: 1;
-  /* background-color: red;  Just for testing */
-	z-index: 10;
-}
+
+	.heading-container-left {
+  		/* left: 0; /* Align at the bottom-left */
+		align-self: flex-end; /* Align at the bottom */
+    	min-height: 95%; /* Limit to 95% height */
+    	/* margin-top: 5%; /* Start 5% from the top */
+	}
+
+	.heading-container-right {
+  		/* background-color: red;  Just for testing */
+		/* right: 0; /* Align at the bottom-right */
+		align-self: flex-end; /* Align at the bottom */
+    	min-height: 80%; /* Limit to 80% height */
+   	 	/* margin-top: 20%; /* Create 20% space from the top */
+    	z-index: 10; /* Ensure it stays above other elements */
+	}
     .heading-container-center {
-      flex: 2; /* Give the center more space for the text */
-      text-align: center;
-      color: white;
-    }
+      	flex: 2; /* Give the center more space for the text */
+      	text-align: center;
+      	color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 20px;
+		}
 
     /* Style the h2 and add animation */
     h2 {
-    margin: 0; /* Remove default margin to perfectly center */
-	font-family: Helvetica, Arial, "sans-serif";
+    	margin: 0; /* Remove default margin to perfectly center */
+		font-family: Helvetica, Arial, "sans-serif";
 	
 		/* 	a, 1em: The minimum font size (smallest size it will shrink to).
 			b, 2vw: The preferred value that scales based on the viewport width (this makes it responsive).
 			c, 2em: The maximum font size (largest size it will grow to).
 			This will ensure that: The text will never go smaller than 1em. It will scale responsively up to 2em based on the viewport size. */
-	font-size: clamp(1.8em, 2.5vw, 3em);
-	align-content: center center;
-	text-align: center;
-	text-overflow: ellipsis;
-	color: #fff!important;
+		font-size: clamp(1.4em, 2.5vw, 3em);
+		align-content: center center;
+		text-align: center;
+		text-overflow: ellipsis;
+		color: #fff!important;
     }
 	  	#cls-1 {
 		fill: #ffffff!important;
         fill-rule: evenodd!important;
-      } 
+    } 
+/* Media query for better scaling on small screens */
+@media (max-width: 768px) {
+    .heading-container {
+        height: 80px; /* Slightly reduce height on smaller screens */
+		border-bottom-left-radius: 50pc 55pc;
+    }
+	.heading-container-left{
+		visibility: hidden;
+	}
+	.heading-container-right{
+		/* visibility: hidden; */
+		align-self: flex-end;
+		justify-content: flex-end;
+        right: 0; /* Stick to the bottom-right */
+        bottom: 0; /* Align at the bottom */
+		width: 80pc;
+        height: 100%; /* Make sure the height is consistent */
+		max-height: 100px;
+        z-index: 10;
+		background-image: url("heading_container_right.svg");
+		background-attachment:inherit;
+		background-clip: border-box;
+		background-color: #51247a;
+		background-position: right bottom;
+		background-size: cover;
+		padding-bottom: 5%;
+	}
+	.heading-container-right svg {
+      	visibility: hidden;
+		/* hiding this stuff to test an idea.
+		width: 100%;
+      	height: 80%; /* Keep the aspect ratio intact */
+		right: 0; /* Stick to the bottom-right */
+        bottom: 0; /* Align at the bottom */
+	}
+    .heading-container-left,
+    .heading-container-right {
+		height: auto;
+		align-self: flex-end;
+		justify-content: flex-end;
+        /* margin-top: 10%; /* Reduce margin-top for better fit */
+    }
+    h2 {
+        font-size: clamp(1.2em, 2vw, 2.5em); /* Slightly smaller text on smaller screens */
+    }
+}
