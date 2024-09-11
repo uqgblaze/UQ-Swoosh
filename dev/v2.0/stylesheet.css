@@ -51,7 +51,7 @@
   		/* left: 0; /* Align at the bottom-left */
 		align-self: flex-end; /* Align at the bottom */
     	max-height: 95%; /* Limit to 95% height */
-    	margin-top: 5%; /* Start 5% from the top */
+    	/* margin-top: 5%; /* Start 5% from the top */
 	}
 
 	.heading-container-right {
@@ -59,7 +59,7 @@
 		/* right: 0; /* Align at the bottom-right */
 		align-self: flex-end; /* Align at the bottom */
     	max-height: 80%; /* Limit to 80% height */
-   	 	margin-top: 20%; /* Create 20% space from the top */
+   	 	/* margin-top: 20%; /* Create 20% space from the top */
     	z-index: 10; /* Ensure it stays above other elements */
 	}
     .heading-container-center {
@@ -89,5 +89,5 @@
     }
 	  	#cls-1 {
 		fill: #ffffff!important;
-        	fill-rule: evenodd!important;
+        fill-rule: evenodd!important;
     } 
