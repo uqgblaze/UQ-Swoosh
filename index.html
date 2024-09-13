@@ -7,9 +7,30 @@
 
 <body>
 	<h1>UQ Swoosh for Blackboard, Edge and UQ Extend</h1>
-	<p>This is a UQ developer portal for URLs to implement into Blackboard, Blackboard Ultra, UQ Extend and Edge.</p>
-	<h3>For the <i>Live</i> content:</h3>
+	<p>This is a UQ developer portal for URLs to implement into Blackboard, UQ Extend and Edge.</p>
+	<p><b style="color: red;">UPDATE</b>: This project is <u>not approved</u> to be implemented into the new rollout in Blackboard Ultra</p>
+	<p><h4>Why is this not approved for Blackboard Ultra?</h4><br> 
+	A few reasons: <br>
+		<ul>
+			<li>This is <b>not a centrally supported tool</b> - although working on future plans to make it one day</li>
+			<li>Although <i>this tool</i> is designed with accessibility in mind, concerns have been raised by <i>others</i> not using appropriate WCAG 2.1 accessibility principles when implementing HTML code into Blackboard Ultra.</li>
+			<li>Emphasis has been placed on using HTML block <b>only as a last resort</b>, and instead should be using the Content Market to import in tools, links, images, videos, H5P, Padlets, etc.</li>
+			<li> There are just not enough person-hours to support it in the initial rollout as there is already a large amount of work involved.</li>
+		</ul>
+	</p>
+	<h2>For the <I style="color: red;">Live</i> content:</h3>
 	<p>Go to: <a href="live/">live/</a> for the current <b> live</b> versions of the page. <b>Use these URLs for iframes!</b></p>
-	
+	<p><h3>Future Plans:</h4></p>
+	<p><ul>
+		<li>Modify the code to read the URL and replace the H2 text, e.g. /flex.html<b>?text=MGTS1301%20Introduction%20to%20Management</b> would read as: <b>MGTS1301 Introduction to Management</b></li>
+		<li>Create a webpage with a form that will: <br> 
+			A) allow a user to input characters (I'm guessing up to 100?) <br>
+			B) Hit submit and it will character replace spaces with %20 to make the link work <br>
+			C) Provide the code in a simple iframe format <br>
+			D) Preview the code's iframe in a few formats (e.g. Desktop, Tablet, and iPhone Vertical) to check for formatting. <br>
+			E) Add a "copy code" javascript to make it easier to copy it to the clipboard.
+		</li>
+		<li>Figure out how to make an LTI - a long-term goal - to make it available through the Content Market</li>
+	</ul></p>
 </body>
 </html>
