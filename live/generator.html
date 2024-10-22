@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iFrame Code Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    label {
+      font-weight: bold;
+		color: #51247a;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .iframe-preview {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      padding: 10px;
+    }
+    .iframe-container {
+      margin-top: 20px;
+      border: 2px solid #ddd;
+      padding: 20px;
+      max-width: 1100px;
+    }
+	  .subtitle{
+		  font-size: 0.8em;
+		  color: #999490;
+	  }
+  </style>
+  <script>
+    function generateIframeCode() {
+      // Get the user inputs
+      var bannerTitle = document.getElementById("bannerTitleInput").value;
+      var height = document.getElementById("heightInput").value;
+
+      // If no height is provided, set default to 140px
+      if (!height) {
+        height = 140;
+      }
+      
+      // Replace spaces with %20 for URL encoding
+      var encodedTitle = encodeURIComponent(bannerTitle);
+      
+      // Generate the iframe code
+      var iframeCode = '<iframe title="' + bannerTitle + '" height="' + height + 'px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=' + encodedTitle + '" frameborder="0" scrolling="no" style="max-width:1100px;"></iframe>';
+      
+      // Display the iframe code in the textarea
+      document.getElementById("iframeCodeOutput").value = iframeCode;
+
+      // Display the preview of the iframe
+      document.getElementById("iframePreview").innerHTML = iframeCode;
+    }
+
+    // Function to copy the iframe code to the clipboard
+    function copyToClipboard() {
+      var iframeCodeText = document.getElementById("iframeCodeOutput");
+      iframeCodeText.select();
+      iframeCodeText.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand("copy");
+      alert("iFrame code copied to clipboard!");
+    }
+  </script>
+</head>
+<body>
+<div align="center"><iframe title="UQ Banner Generator" height="140px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=UQ%20Banner%20Generator" frameborder="0" scrolling="no" style="max-width:1100px;"></iframe></div>
+
+  <label for="bannerTitleInput">Enter Banner Title:</label>
+	<br><span class="subtitle">This will be added as heading text</span>
+  <input type="text" id="bannerTitleInput" placeholder="Enter your banner title here" oninput="generateIframeCode()">
+
+  <label for="heightInput">Enter iFrame Height (in pixels):</label><br><span class="subtitle">default height = 140px; max-width = 1100px; width = 100%;</span>
+  <input type="number" id="heightInput" placeholder="Enter height in pixels" oninput="generateIframeCode()">
+
+  <label>Generated iFrame Code:</label>
+  <textarea id="iframeCodeOutput" readonly style="background-color: #d7D1CC;"></textarea>
+  
+  <button onclick="copyToClipboard()">Copy Code</button>
+
+  <div class="iframe-preview">
+    <h3>iFrame Preview:</h3>
+    <div id="iframePreview" class="iframe-container">
+      <!-- iFrame will be generated here -->
+    </div>
+  </div>
+
+</body>
+</html>
