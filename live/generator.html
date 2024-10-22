@@ -43,7 +43,7 @@
 		  color: #999490;
 	  }
 	  .center-all{
-  		max-width: 1100px; /* Set the maximum width */
+  		max-width: 1200px; /* Set the maximum width */
   		margin: 0 auto;    /* Center the div horizontally */
   		width: 100%;       /* Make the div responsive, using 100% of the available space */
  		padding: 0 15px;   /* Optional: Add some padding to prevent content from touching the edges */
@@ -65,7 +65,7 @@
       var encodedTitle = encodeURIComponent(bannerTitle);
       
       // Generate the iframe code
-      var iframeCode = '<iframe title="' + bannerTitle + '" height="' + height + 'px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=' + encodedTitle + '" frameborder="0" scrolling="no" style="max-width:1100px;"></iframe>';
+      var iframeCode = '<iframe title="' + bannerTitle + '" height="' + height + 'px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=' + encodedTitle + '" frameborder="0" scrolling="no" style="max-width:1200px;"></iframe>';
       
       // Display the iframe code in the textarea
       document.getElementById("iframeCodeOutput").value = iframeCode;
@@ -85,7 +85,7 @@
   </script>
 </head>
 <body>
-<div align="center"><iframe title="UQ Banner Generator" height="140px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=UQ%20Banner%20Generator" frameborder="0" scrolling="no" style="max-width:1100px;"></iframe></div>
+<div align="center"><iframe title="UQ Banner Generator" height="140px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=UQ%20Banner%20Generator" frameborder="0" scrolling="no" style="max-width:1200px;"></iframe></div>
 <div class="center-all">	
   <h1 style="color: #51247A; padding-bottom: 0px; margin-bottom: 0px;">Instructions</h1>
 	<span class="subtitle">Fill out the form below with what you want to put into your banner. You can also modify the height of the banner too, in case if you run into some technical difficulties. The default parameters are listed under each label. As you fill out the form, it will generate a live preview of the code. When you're happy with it, click on "Copy Code" to copy it to your clipboard and paste it in as HTML code.<br><p><br></p></span>
@@ -95,7 +95,7 @@
 	<br><span class="subtitle">Supports somewhere between 68 ~ 78 max characters across two lines. Don't exceed two lines of text; it's not built for it.</span>
   <input type="text" id="bannerTitleInput" placeholder="Enter your banner title here" oninput="generateIframeCode()">
 
-  <label for="heightInput">Enter iFrame Height (in pixels):</label><br><span class="subtitle">default height = 140px; max-width = 1100px; width = 100%;</span>
+  <label for="heightInput">Enter iFrame Height (in pixels):</label><br><span class="subtitle">default height = 140px; max-width = 1200px; width = 100%;</span>
   <input type="number" id="heightInput" placeholder="Enter height in pixels" oninput="generateIframeCode()">
 
   <label>Generated iFrame Code:</label>
