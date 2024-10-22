@@ -15,10 +15,14 @@
 
     // Update the title based on the 'title' query parameter
     window.onload = function() {
+      console.log("Script running"); // This should print to console if script is running
       var pageTitle = getQueryParameter("title");
       if (pageTitle) {
+        console.log("Title found:", pageTitle); // Log the title to console
         document.title = pageTitle; // Set the document's title to the parameter value
-        document.getElementById("pageTitle").textContent = pageTitle; // Also update content on the page
+        document.getElementById("bannerTitle").textContent = pageTitle; // Also update content on the page
+      } else {
+        console.log("No title query parameter found.");
       }
     }
   </script>
@@ -35,7 +39,7 @@
 
   <!-- Center container with the title -->
   <div class="heading-container-center" data-aos="fade-up">
-    <h2 id="pageTitle">Flex Query Banner</h2> <!-- Default Title if no parameter is passed -->
+    <h2 id="bannerTitle">Flex Query Banner</h2> <!-- Default Title if no parameter is passed -->
   </div>
 
   <!-- Right portion of the SVG -->
