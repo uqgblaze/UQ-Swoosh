@@ -21,8 +21,8 @@
 	  	overflow: hidden;
 			/* Clip the right side to fix some lines */
 			/* top, right, bottom, left */
-			/* This means the element will be clipped 0 pixels from the top, 0 pixels from the right, 4 pixels from the bottom, and 2 pixels from the left. */
-		clip-path: inset(0px 0px 4px 2px);
+			/* This means the element will be clipped 0 pixels from the top, 0 pixels from the right, 5 pixels from the bottom, and 2 pixels from the left. */
+		clip-path: inset(0px 0px 5px 2px);
 		padding-top: 0;
 		padding-left: 0;
 		margin-top: 0;
