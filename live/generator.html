@@ -9,11 +9,11 @@
       font-family: Arial, sans-serif;
       margin: 20px;
       padding: 0;
-		background-color: #f8f8f8;
+      background-color: #f8f8f8;
     }
     label {
       font-weight: bold;
-		color: #51247a;
+      color: #51247a;
     }
     input, button {
       padding: 10px;
@@ -38,32 +38,32 @@
       border: 2px dotted #ddd;
       padding: 0px;
       max-width: 1200px;
-	min-height: 50px;
+      min-height: 50px;
     }
-	  .subtitle{
-		  font-size: 0.8em;
-		  color: #999490;
-	  }
-	  .center-all{
-  		max-width: 1200px; 			/* Set the maximum width */
-  		margin: 0 auto;    			/* Center the div horizontally */
-  		width: 100%;       			/* Make the div responsive, using 100% of the available space */
- 		padding: 0 15px;   			/* Optional: Add some padding to prevent content from touching the edges */
-  		box-sizing: border-box; 	/* Ensure padding is included in the width */
-		  background-color: #fff; 	/* Set the background colour to white */
-		  border: 1px solid #ddd; 	/* Add a thin border around the box */
-		  padding-bottom: 20px; 	/* Add some padding at the bottom after the preview box */
-		  padding-top: 10px;		/* Add a little paddint at the top before the iframe banner */
-	  }
-	  .text-block{
-		  padding-left: 15px;		/* Move the text in to align with iframe dimensions */
-		  padding-right: 15px;		/* Move the text in to align with iframe dimensions */
-	  }
-	  .copyright-notice{
-		  padding-top: 15px;
-		  color: #D7D1CC;
-		  font-size: 0.7em;
-	  }
+    .subtitle {
+      font-size: 0.8em;
+      color: #999490;
+    }
+    .center-all {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 15px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
+    .text-block {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .copyright-notice {
+      padding-top: 15px;
+      color: #D7D1CC;
+      font-size: 0.7em;
+    }
   </style>
   <script>
     function generateIframeCode() {
@@ -79,8 +79,8 @@
       // Replace spaces with %20 for URL encoding
       var encodedTitle = encodeURIComponent(bannerTitle);
       
-      // Generate the iframe code
-      var iframeCode = '<iframe title="' + bannerTitle + '" height="' + height + 'px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=' + encodedTitle + '" frameborder="0" scrolling="no" style="max-width:1200px;"></iframe>';
+      // Generate the iframe code with aria-label for accessibility
+      var iframeCode = '<iframe title="' + bannerTitle + '" aria-label="Heading titled ' + bannerTitle + '" height="' + height + 'px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=' + encodedTitle + '" frameborder="0" scrolling="no" style="max-width:1200px;"></iframe>';
       
       // Display the iframe code in the textarea
       document.getElementById("iframeCodeOutput").value = iframeCode;
@@ -101,32 +101,57 @@
 </head>
 <body>
 <div class="center-all">
-<div align="center"><iframe title="UQ Banner Generator" height="150px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=UQ%20Banner%20Generator" frameborder="0" scrolling="no" style="max-width:1200px;"></iframe></div>
-<div class="text-block">
-  <h1 style="color: #51247A; padding-bottom: 0px; margin-bottom: 0px;">Instructions</h1>
-	<span class="subtitle">Fill out the form below with what you want to put into your banner. You can also modify the height of the banner too, in case if you run into some technical difficulties. The default parameters are listed under each label. As you fill out the form, it will generate a live preview of the code. When you're happy with it, click on "Copy Code" to copy it to your clipboard and paste it in as HTML code.<br><p><br></p></span>
-
-
-  <p><label for="bannerTitleInput">Enter Banner Title:</label>
-	<br><span class="subtitle">Supports somewhere between 68 ~ 78 max characters across two lines. Don't exceed two lines of text; it's not built for it.</span>
-  <input type="text" id="bannerTitleInput" placeholder="Enter your banner title here" oninput="generateIframeCode()"></p>
-
-  <p><label for="heightInput">Optional: Edit iFrame Height (in pixels):</label><br><span class="subtitle">default settings: height = 150px; max-height: 250px; max-width = 1200px; width = 100%;</span>
-  <input type="number" id="heightInput" placeholder="Enter height in pixels" oninput="generateIframeCode()"></p>
-
-  <p><label>Generated iFrame Code:</label><br>
-	<span class="subtitle">Copy the code below and paste it into Blackboard or Edge/Extend</span>
-  <textarea id="iframeCodeOutput" readonly style="background-color: #d7D1CC;"></textarea></p>
-  
-  <button onclick="copyToClipboard()">Copy Code</button>
-
-  <div class="iframe-preview">
-    <h3>iFrame Preview:</h3>
-    <div id="iframePreview" class="iframe-container">
-      <!-- iFrame will be generated here -->
-    </div>
+  <div align="center">
+    <iframe title="UQ Banner Generator" aria-label="Heading titled UQ Banner Generator" height="150px" width="100%" src="https://uqgblaze.github.io/UQ-Swoosh/live/flex-query.html?title=UQ%20Banner%20Generator" frameborder="0" scrolling="no" style="max-width:1200px;"></iframe>
   </div>
-<div class="copyright-notice" align="center">© The University of Queensland, 2025.</div></div>
+
+  <div class="text-block">
+    <h1 style="color: #51247A; padding-bottom: 0px; margin-bottom: 0px;">Instructions</h1>
+    <span class="subtitle">
+      Fill out the form below with what you want to put into your banner. You can also modify the height of the banner too, in case if you run into some technical difficulties. The default parameters are listed under each label. As you fill out the form, it will generate a live preview of the code. When you're happy with it, click on "Copy Code" to copy it to your clipboard and paste it in as HTML code.<br><p><br></p>
+    </span>
+
+    <h3 style="color: #51247A; padding-bottom: 0px; margin-bottom: 0px;">Accessibility Notes:</h3>
+    <p>The following considerations were implemented to meet accessibility guidelines:</p>
+    <ul>
+      <li>All iframes include <code>title</code> and <code>aria-label</code> to allow screen readers to describe the title of the iframe banner.</li>
+      <li>The code within the iframe uses a standard heading tag, <code>&lt;h2&gt;</code>, to ensure that screen readers can read it as a heading.</li>
+		<li>If the screen reader can't read the content within the iframe, it can still read the name of the iframe using <code>aria-label</code> for accessibility.</li>
+    </ul>
+
+    <p>
+      <label for="bannerTitleInput">Enter Banner Title:</label><br>
+      <span class="subtitle">Supports up to a maximum of approximately 68 ~ 78 characters across two lines. Don't exceed two lines of text; it's not built for it.</span>
+      <input type="text" id="bannerTitleInput" aria-label="Enter the banner title for the iframe" placeholder="Enter your banner title here" oninput="generateIframeCode()">
+    </p>
+
+    <p>
+      <label for="heightInput">Optional: Edit iFrame Height (in pixels):</label><br>
+      <span class="subtitle">default settings: height = 150px; max-height (maximum supported height within iframe): 250px; | width = 100%; max-width = 1200px;</span>
+      <input type="number" id="heightInput" aria-label="Enter the height for the iframe in pixels" placeholder="Enter height in pixels" oninput="generateIframeCode()">
+    </p>
+
+    <p>
+      <label>Generated iFrame Code:</label><br>
+      <span class="subtitle">Copy the code below and paste it into Blackboard or Edge/Extend</span>
+      <textarea id="iframeCodeOutput" aria-label="Generated iframe code to copy" readonly style="background-color: #d7D1CC;"></textarea>
+    </p>
+    
+    <button onclick="copyToClipboard()" aria-label="Copy the generated iframe code">Copy Code</button>
+
+    <div class="iframe-preview">
+      <h3>iFrame Preview:</h3>
+      <div id="iframePreview" class="iframe-container">
+        <!-- iFrame will be generated here -->
+      </div>
+    </div>
+	<h4>Changelog:</h4>
+	  <ul style="font-size: small">
+	  	<li><b>24 October, 2024:</b> Added <code>aria-label</code> support to improve the reliability of screen reading support on all platforms.</li>
+	  </ul>
+    <div class="copyright-notice" align="center">© The University of Queensland, 2025.</div>
+  </div>
 </div>
 </body>
 </html>
+
