@@ -87,13 +87,13 @@ body {
       text-align: center;
       margin: 0px 0 0 0;
       padding: 0;
-      z-index: 10;    
+		z-index: 10;
     }
 
 /* Link styling */
 .source-text a {
   color: #D7D1CC; /* Default link color matches "Source" color */
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .source-text a:hover {
@@ -110,9 +110,10 @@ body {
       .quote-text {
         font-size: clamp(1.2em, 2vw, 2.5em);
       }
-
-      /* Reduce space between heading-container and source-text */
+		
+		/* deprecating to test issues with link hiding on small screens; 
+      /* Reduce space between heading-container and source-text *
       .source-text {
-        margin-top: -80px; /* Adjust this value as needed */
-      }
+        margin-top: -80px; /* Adjust this value as needed *
+      }*/
     }
