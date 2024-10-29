@@ -89,6 +89,17 @@ body {
       padding: 0;
     }
 
+/* Link styling */
+.source-text a {
+  color: #D7D1CC; /* Default link color matches "Source" color */
+  text-decoration: none;
+}
+
+.source-text a:hover {
+  color: #51247a; /* Hover color for link */
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
     /* Responsive scaling for smaller screens */
     @media (max-width: 768px) {
       .heading-container {
