@@ -92,7 +92,7 @@ body {
 /* Link styling */
 .source-text a {
   color: #D7D1CC; /* Default link color matches "Source" color */
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .source-text a:hover {
