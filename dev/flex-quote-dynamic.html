@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-	<link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/dev/style-quote.css">
+  <link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/dev/style-quote.css">
   <title>Flex Quote Banner</title>
   
   <script>
@@ -21,7 +21,16 @@
 
       if (quote) document.getElementById("quote-text").textContent = quote;
       if (author) document.getElementById("author-text").textContent = `— ${author}`;
-      if (source) document.getElementById("source-text").textContent = `Source: ${source}`;
+      
+      const sourceTextElement = document.getElementById("source-text");
+      if (source) {
+        // Check if the source starts with "http" to create a clickable link
+        if (source.startsWith("http")) {
+          sourceTextElement.innerHTML = `Source: <a href="${source}" target="_blank" rel="noopener noreferrer">${source}</a>`;
+        } else {
+          sourceTextElement.textContent = `Source: ${source}`;
+        }
+      }
     };
   </script>
 </head>
