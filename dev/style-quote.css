@@ -104,7 +104,7 @@ body {
     /* Responsive scaling for smaller screens */
     @media (max-width: 768px) {
       .heading-container {
-        min-height: 300px;
+        min-height: 400px;
       }
 
       .quote-text {
