@@ -19,7 +19,8 @@
       const author = getQueryParameter("author");
       const source = getQueryParameter("source");
 
-      if (quote) document.getElementById("quote-text").textContent = quote;
+      // Use innerHTML for quote to render <br> tags as line breaks
+      if (quote) document.getElementById("quote-text").innerHTML = quote;
       if (author) document.getElementById("author-text").textContent = `— ${author}`;
       
       const sourceTextElement = document.getElementById("source-text");
