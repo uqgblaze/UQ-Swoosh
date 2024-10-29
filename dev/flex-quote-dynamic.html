@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/dev/style-quote.css">
+
+	<!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	
   <title>Flex Quote Banner</title>
   
   <script>
@@ -20,7 +26,7 @@
       const source = getQueryParameter("source");
 
       // Use innerHTML for quote to render <br> tags as line breaks
-      if (quote) document.getElementById("quote-text").innerHTML = quote;
+      if (quote) document.getElementById("quote-text").innerHTML = `&ldquo; ${quote} &rdquo;`;
       if (author) document.getElementById("author-text").textContent = `— ${author}`;
       
       const sourceTextElement = document.getElementById("source-text");
@@ -45,7 +51,8 @@
   </div>
 
   <div class="heading-container-center" data-aos="fade-up">
-    <p id="quote-text" class="quote-text">"Default Quote Text"</p>
+    <p id="quote-text" class="quote-text">&ldquo;Default Quote Text&rdquo;
+</p>
     <p id="author-text" class="author-text">— Default Author</p>
   </div>
 
