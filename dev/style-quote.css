@@ -3,7 +3,6 @@
 /* stylesheet for flex-quote-dynamic.html */
 body {
       min-height: 400px;
-      max-height: 1000px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -54,9 +53,10 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 0 20px;
+      padding: 20px;
       z-index: 1;
-		width: 60%;
+	  width: 60%; /* Ensures the quoted text block is only 60% of container width */
+      margin: 0 auto; /* Centers the text block */
     }
 
     /* Quote text */
@@ -93,7 +93,6 @@ body {
     @media (max-width: 768px) {
       .heading-container {
         min-height: 300px;
-        max-height: 900px;
       }
 
       .quote-text {
