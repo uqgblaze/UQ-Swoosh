@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/live/style-quote.css">
+  <title>Flex Quote Banner</title>
+  
+  <script>
+    // Load URL parameters for quote, author, and source
+    function getQueryParameter(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    window.onload = function() {
+      const quote = getQueryParameter("quote");
+      const author = getQueryParameter("author");
+      const source = getQueryParameter("source");
+
+      // Use innerHTML for quote to render <br> tags as line breaks
+      if (quote) document.getElementById("quote-text").innerHTML = quote;
+      if (author) document.getElementById("author-text").textContent = `— ${author}`;
+      
+      const sourceTextElement = document.getElementById("source-text");
+      if (source) {
+        // Check if the source starts with "http" to create a clickable link
+        if (source.startsWith("http")) {
+          sourceTextElement.innerHTML = `Source: <a href="${source}" target="_blank" rel="noopener noreferrer">${source}</a>`;
+        } else {
+          sourceTextElement.textContent = `Source: ${source}`;
+        }
+      }
+    };
+  </script>
+</head>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+
+<div class="heading-container" data-aos="fade-in">
+  <div class="heading-container-left">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
+      <path class="cls-1" d="M.1759,12.67019l.94049,17.59863c9.62793,90.51685,90.07412,177.81189,199.61193,211.13843h12.6438v.01355H.1759V12.67019H.1759Z" fill="#FFFFFF"></path>
+    </svg>
+  </div>
+
+  <div class="heading-container-center" data-aos="fade-up">
+    <p id="quote-text" class="quote-text">"Default Quote Text"</p>
+    <p id="author-text" class="author-text">— Default Author</p>
+  </div>
+
+  <div class="heading-container-right">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="480 0 480 240" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
+      <path class="cls-1" d="M960.74746-3.37925h.0285v244.80005h-213.19623v-.01355h213.16772c-24.02972-3.26794-65.89594-21.57336-103.72662-33.02332-42.89709-13.00793-52.42279-4.47449-73.04016,12.90405,4.51501-5.38538,54.00494-53.53406,78.80981-66.58203,48.55505-25.56848,94.77649-3.62744,97.95697-2.54077V-3.37925Z" fill="#FFFFFF"></path>
+    </svg>
+  </div>
+</div>
+<!-- Simplified and fixed position of source text -->
+<div style="text-align: center; padding: 10px;">
+  <p id="source-text" class="source-text">Source: Default Source</p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 20,
+  });
+</script>
+
+</body>
+</html>
