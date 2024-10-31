@@ -26,7 +26,7 @@
       const source = getQueryParameter("source");
 
       // Use innerHTML for quote to render <br> tags as line breaks
-      if (quote) document.getElementById("quote-text").innerHTML = `&ldquo; ${quote} &rdquo;`;
+      if (quote) document.getElementById("quote-text").innerHTML = `${quote}`;
       if (author) document.getElementById("author-text").textContent = `— ${author}`;
       
       const sourceTextElement = document.getElementById("source-text");
@@ -56,7 +56,7 @@
     }
 
     .quote-text, .author-text {
-      color: #2B1D37!important;
+      color: #000!important;
     }
 
     .quote-icon {
@@ -84,7 +84,8 @@
   </div>
 
   <div class="heading-container-center" data-aos="fade-up">
-    <p id="quote-text" class="quote-text">&ldquo;Default Quote Text&rdquo;</p>
+    <p id="quote-text" class="quote-text">Default Quote Text</p>
+	  <br />
     <p id="author-text" class="author-text">— Default Author</p>
   </div>
 
