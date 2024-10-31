@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="style-quote.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+	
+  <title>Flex Quote Banner</title>
+  
+  <script>
+    // Load URL parameters for quote, author, and source
+    function getQueryParameter(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    window.onload = function() {
+      const quote = getQueryParameter("quote");
+      const author = getQueryParameter("author");
+      const source = getQueryParameter("source");
+
+      // Use innerHTML for quote to render <br> tags as line breaks
+      if (quote) document.getElementById("quote-text").innerHTML = `&ldquo; ${quote} &rdquo;`;
+      if (author) document.getElementById("author-text").textContent = `— ${author}`;
+      
+      const sourceTextElement = document.getElementById("source-text");
+      if (source) {
+        // Check if the source starts with "http" to create a clickable link
+        if (source.startsWith("http")) {
+          sourceTextElement.innerHTML = `Source: <a href="${source}" target="_blank" rel="noopener noreferrer">${source}</a>`;
+        } else {
+          sourceTextElement.textContent = `Source: ${source}`;
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Override colors from stylesheet */
+    .heading-container {
+      background-color: #D7D1CC!important;
+      position: relative;
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .quote-text, .author-text {
+      color: #2B1D37!important;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      z-index: 20;
+    }
+
+    #source-text {
+      font-size: 0.8em;
+      color: #999490;
+      position: absolute;
+      bottom: 3%;
+      text-align: center;
+      width: 100%;
+    }
+  </style>	
+</head>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+
+<div class="heading-container" data-aos="fade-in">
+  <div class="quote-icon">
+    <img src="https://uqgblaze.github.io/UQ-Swoosh/dev/quote-999490.svg" height="60px" width="60px" aria-hidden="true" alt="Quote">
+  </div>
+
+  <div class="heading-container-center" data-aos="fade-up">
+    <p id="quote-text" class="quote-text">&ldquo;Default Quote Text&rdquo;</p>
+    <p id="author-text" class="author-text">— Default Author</p>
+  </div>
+
+  <p id="source-text" class="source-text">Source: Default Source</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 20,
+  });
+</script>
+
+</body>
+</html>
