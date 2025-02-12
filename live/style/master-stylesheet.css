@@ -236,7 +236,7 @@ a:hover {
 .bg-white{
 	background-color: var(--uq-white);
 	color: inherit;
-	border: 1px solid var(--uq-purple);
+	border: 1px solid #51247A;
 }
 /* -------------------- */
 
