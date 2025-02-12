@@ -279,7 +279,7 @@ a:hover {
 
 /* Background-Based Heading Colors */
 .bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple,  
-.bg-purple-gradient, .bg-purple-gradient-vertical, .bg-purple-gradient-horizontal, 
+.bg-purple-gradient, .bg-purple-gradient, .bg-purple-gradient-vertical, .bg-purple-gradient-horizontal, 
 .bg-postgrad-gradient, .bg-postgrad-gradient-vertical, .bg-postgrad-gradient-horizontal  {
     --heading-color: var(--uq-white);
 	color: var(--uq-white);
