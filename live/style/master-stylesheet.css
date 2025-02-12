@@ -10,14 +10,24 @@
     --uq-green: #2EA836; /* PMS 362 */
     --uq-red: #E62645; /* PMS 193 */
     --uq-light-purple: #962A8B; /* PMS 7656 */
-	--uq-dark-purple: #1F0029;
+    --uq-dark-purple: #1F0029;
     --uq-gold: #BB9D65; /* PMS 465 */
-    --uq-dark-grey: #999490; /* PMS 408 */
     --uq-yellow: #FBB800; /* PMS 143 */
     --uq-orange: #EB602B; /* PMS 166 */
     --uq-blue: #4085C6; /* PMS 2143 */
     --uq-aqua: #00A2C7; /* PMS 7703 */
+	
+	/* Neutral Colours */
     --uq-neutral: #D7D1CC; /* PMS 406 */
+	--uq-neutral20: #F7F6F5;
+	--uq-neutral40: #EFECEA;
+	--uq-neutral60: #E7E3E0;
+	--uq-neutral80: #DFDAD6;
+    --uq-dark-grey: #999490; /* PMS 408 */
+	--uq-dark-grey20: #EBE8E7;
+	--uq-dark-grey40: #D8D2D0;
+	--uq-dark-grey60: #C4BDBA;
+	--uq-dark-grey80: #B1A8A4;
     
     /* Gradients - Undergrad (aka purple) */
     --uq-purple-gradient: linear-gradient(to bottom,#51247A 0%, #51247A 80%, #962A8B 100%);
@@ -101,7 +111,7 @@ a:hover {
 
 /* Graphic Device */
 .graphic-device-left {
-    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-curve_leftside.svg') no-repeat;
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-curve_leftside.svg') no-repeat bottom left;
     background-size: contain;
 }
 
@@ -236,7 +246,7 @@ a:hover {
 .bg-white{
 	background-color: var(--uq-white);
 	color: inherit;
-	border: 1px solid #51247A;
+	border: 1px solid var(--uq-purple);
 }
 /* -------------------- */
 
