@@ -233,6 +233,11 @@ a:hover {
 .bg-dark-grey {
     background-color: var(--uq-dark-grey);
 }
+.bg-white{
+	background-color: var(--uq-white);
+	color: inherit;
+	border: 1px solid var(--uq-purple);
+}
 /* -------------------- */
 
 /* Backgrounds - Gradients */
