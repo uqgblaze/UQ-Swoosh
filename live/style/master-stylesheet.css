@@ -53,6 +53,7 @@ p {
     color: var(--uq-black);
 }
 
+
 /* Business School Differentiation */
 .undergraduate {
     background: var(--uq-purple-gradient);
@@ -140,14 +141,14 @@ a:hover {
 }
 
 .bg-purple-gradient {
-    background: var(--uq-purple-gradient);
-    color: var(--uq-white);
+	background-color: var(--uq-purple-gradient);
+    color: var(--uq-white)!important;
     padding: 10px;
 }
 
 .bg-postgrad-gradient {
-    background: var(--uq-postgrad-gradient);
-    color: var(--uq-white);
+	background-color: var(--uq-postgrad-gradient);
+    color: var(--uq-white)!important;
     padding: 10px;
 }
 
@@ -163,3 +164,6 @@ a:hover {
     padding: 10px;
 }
 
+.white-font {
+    color: var(--uq-white)!important;
+}
