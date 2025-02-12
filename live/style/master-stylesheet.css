@@ -10,6 +10,7 @@
     --uq-green: #2EA836; /* PMS 362 */
     --uq-red: #E62645; /* PMS 193 */
     --uq-light-purple: #962A8B; /* PMS 7656 */
+	--uq-dark-purple: #1F0029;
     --uq-gold: #BB9D65; /* PMS 465 */
     --uq-dark-grey: #999490; /* PMS 408 */
     --uq-yellow: #FBB800; /* PMS 143 */
@@ -23,7 +24,7 @@
     --uq-postgrad-gradient: linear-gradient(to bottom, #51247A 0%, #1F0029 100%);
     
     /* Typography */
-    --font-heading: 'Merriweather', 'Open Sans', sans-serif;
+    --font-heading: 'Merriweather', 'Open Sans', sans-serif; /*'Merriweather' is the correct font, but 'Open Sans' is the default on Blackboard Ultra. */
     --font-body: 'Open Sans', 'Arial', sans-serif;
     
     /* Font Weights */
@@ -44,13 +45,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: var(--font-bold);
-    color: var(--uq-purple);
+    /* color: var(--uq-purple); /* removed to have inherit instead */
+	color: inherit;
 }
 
 p {
     font-family: var(--font-body);
     font-weight: var(--font-regular);
-    color: var(--uq-black);
+    /* color: var(--uq-black); /* color: var(--uq-purple); /* removed to have inherit instead */
+	color: inherit;
 }
 
 
@@ -134,6 +137,54 @@ a:hover {
     font-weight: var(--font-bold);
 }
 
+/* Text Color Overrides */
+   	/* Primary Colours */
+.text-purple{
+	color: var(--uq-purple);
+}
+.text-white{
+	color: var(--uq-white);
+}
+.text-black{
+	color: var(--uq-black);
+}
+	/* Secondary Colours */
+.text-green{
+	color: var(--uq-green);
+}
+.text-red{
+	color: var(--uq-red);
+}
+.text-light-purple{
+	color: var(--uq-light-purple);
+}
+.text-dark-purple{
+	color: var(--uq-dark-purple);
+}
+.text-gold{
+	color: var(--uq-gold);
+}
+.text-dark-grey{
+	color: var(--uq-dark-grey);
+}
+.text-yellow{
+	color: var(--uq-yellow);
+}
+.text-orange{
+	color: var(--uq-orange);
+}
+.text-blue{
+	color: var(--uq-blue);
+}
+.text-aqua{
+	color: var(--uq-aqua);
+}
+.text-neutral{
+	color: var(--uq-neutral);
+}
+
+
+/* Backgrounds */
 .bg-purple {
     background-color: var(--uq-purple);
     color: var(--uq-white);
@@ -141,13 +192,13 @@ a:hover {
 }
 
 .bg-purple-gradient {
-	background-color: var(--uq-purple-gradient);
+	background: var(--uq-purple-gradient);
     color: var(--uq-white)!important;
     padding: 10px;
 }
 
 .bg-postgrad-gradient {
-	background-color: var(--uq-postgrad-gradient);
+	background: var(--uq-postgrad-gradient);
     color: var(--uq-white)!important;
     padding: 10px;
 }
@@ -163,7 +214,14 @@ a:hover {
     color: var(--uq-black);
     padding: 10px;
 }
+.bg-neutral {
+    background-color: var(--uq-neutral);
+    color: var(--uq-black);
+    padding: 10px;
+}
 
+
+/* Old CSS - being deprecated */
 .white-font {
-    color: #FFFFFF;
+    color: var(--uq-white)!important;
 }
