@@ -21,10 +21,10 @@
     
     /* Gradients - Undergrad (aka purple) */
     --uq-purple-gradient: linear-gradient(to bottom, #51247A 20%, #962A8B 80%);
-    --uq-purple-gradient-vertical: linear-gradient(to bottom, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
-    --uq-purple-gradient-horizontal: linear-gradient(to right, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
-    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
-    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
+    --uq-purple-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
+    --uq-purple-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
+    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
+    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
 	
 	/* Gradients - Postgrad (aka dark-purple) */
 	--uq-postgrad-gradient: linear-gradient(to bottom, #51247A 20%, #1F0029 70%);
@@ -266,6 +266,16 @@ a:hover {
     color: var(--uq-white);
     padding: 10px;
 }
+.bg-postgrad-gradient-vertical {
+	background: var( --uq-postgrad-gradient-vertical);
+    color: var(--uq-white);
+    padding: 10px;
+}
+.bg-postgrad-gradient-horizontal {
+	background: var( --uq-postgrad-gradient-horizontal);
+    color: var(--uq-white);
+    padding: 10px;
+}
 
 /* Background-Based Heading Colors */
 .bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple, .bg-blue, .bg-purple-gradient, .bg-postgrad-gradient {
@@ -293,7 +303,9 @@ a:hover {
 .bg-purple-gradient h1, .bg-purple-gradient h2, .bg-purple-gradient h3, .bg-purple-gradient h4, .bg-purple-gradient h5, .bg-purple-gradient h6,
 .bg-purple-gradient-vertical h1, .bg-purple-gradient-vertical h2, .bg-purple-gradient-vertical h3, .bg-purple-gradient-vertical h4, .bg-purple-gradient-vertical h5, .bg-purple-gradient-vertical h6,
 .bg-purple-gradient-horizontal h1, .bg-purple-gradient-horizontal h2, .bg-purple-gradient-horizontal h3, .bg-purple-gradient-horizontal h4, .bg-purple-gradient-horizontal h5, .bg-purple-gradient-horizontal h6,
-.bg-postgrad-gradient h1, .bg-postgrad-gradient h2, .bg-postgrad-gradient h3, .bg-postgrad-gradient h4, .bg-postgrad-gradient h5, .bg-postgrad-gradient h6 {
+.bg-postgrad-gradient h1, .bg-postgrad-gradient h2, .bg-postgrad-gradient h3, .bg-postgrad-gradient h4, .bg-postgrad-gradient h5, .bg-postgrad-gradient h6
+.bg-postgrad-gradient-vertical h1, .bg-postgrad-gradient-vertical h2, .bg-postgrad-gradient-vertical h3, .bg-postgrad-gradient-vertical h4, .bg-postgrad-gradient-vertical h5, .bg-postgrad-gradient-vertical h6,
+.bg-postgrad-gradient-horizontal h1, .bg-postgrad-gradient-horizontal h2, .bg-postgrad-gradient-horizontal h3, .bg-postgrad-gradient-horizontal h4, .bg-postgrad-gradient-horizontal h5, .bg-postgrad-gradient-horizontal h6 {
     color: var(--heading-color, var(--uq-purple));
 }
 /* -------------------- */
