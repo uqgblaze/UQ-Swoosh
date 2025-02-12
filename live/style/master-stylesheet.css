@@ -19,12 +19,24 @@
     --uq-aqua: #00A2C7; /* PMS 7703 */
     --uq-neutral: #D7D1CC; /* PMS 406 */
     
-    /* Gradients */
-    --uq-purple-gradient: linear-gradient(to bottom, #51247A 0%, #962A8B 100%);
-    --uq-postgrad-gradient: linear-gradient(to bottom, #51247A 0%, #1F0029 100%);
-    
+    /* Gradients - Undergrad (aka purple) */
+    --uq-purple-gradient: linear-gradient(to bottom, #51247A 20%, #962A8B 80%);
+    --uq-purple-gradient-vertical: linear-gradient(to bottom, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
+    --uq-purple-gradient-horizontal: linear-gradient(to right, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
+    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
+    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-light-purple) 20%, var(--uq-purple) 80%);
+	
+	/* Gradients - Postgrad (aka dark-purple) */
+	--uq-postgrad-gradient: linear-gradient(to bottom, #51247A 20%, #1F0029 70%);
+    --uq-postgrad-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 30%, var(--uq-dark-purple) 70%);
+    --uq-postgrad-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 20%, var(--uq-dark-purple) 80%);
+    --uq-postgrad-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 20%, var(--uq-dark-purple) 80%);
+    --uq-postgrad-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 20%, var(--uq-dark-purple) 80%);
+
+
+	
     /* Typography */
-    --font-heading: 'Merriweather', 'Open Sans', sans-serif; /*'Merriweather' is the correct font, but 'Open Sans' is the default on Blackboard Ultra. */
+    --font-heading: 'Open Sans', sans-serif; /*'Merriweather' is the correct font, but 'Open Sans' is the default on Blackboard Ultra. */
     --font-body: 'Open Sans', 'Arial', sans-serif;
     
     /* Font Weights */
@@ -45,14 +57,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: var(--font-bold);
-    /* color: var(--uq-purple); /* removed to have inherit instead */
-	color: inherit;
+    color: var(--uq-purple); 
 }
 
 p {
     font-family: var(--font-body);
     font-weight: var(--font-regular);
-    /* color: var(--uq-black); /* color: var(--uq-purple); /* removed to have inherit instead */
 	color: inherit;
 }
 
@@ -164,9 +174,6 @@ a:hover {
 .text-gold{
 	color: var(--uq-gold);
 }
-.text-dark-grey{
-	color: var(--uq-dark-grey);
-}
 .text-yellow{
 	color: var(--uq-yellow);
 }
@@ -179,18 +186,75 @@ a:hover {
 .text-aqua{
 	color: var(--uq-aqua);
 }
+	/* Neutral Colours */
 .text-neutral{
 	color: var(--uq-neutral);
 }
+.text-dark-grey{
+	color: var(--uq-dark-grey);
+}
+/* -------------------- */
 
 
-/* Backgrounds */
+/* Backgrounds - Solid */
+	/* Primary Colours */
 .bg-purple {
     background-color: var(--uq-purple);
     color: var(--uq-white);
-    padding: 10px;
 }
+.bg-black {
+    background-color: var(--uq-black);
+    color: var(--uq-white);
+}
+	/* Secondary Colours */
+.bg-light-purple {
+    background-color: var(--uq-light-purple);
+    color: var(--uq-white);
+}
+.bg-dark-purple {
+    background-color: var(--uq-dark-purple);
+    color: var(--uq-white);
+}
+.bg-green {
+    background-color: var(--uq-green);
+    color: var(--uq-black);
+}
+.bg-red {
+    background-color: var(--uq-red);
+    color: var(--uq-black);
+}
+.bg-gold {
+    background-color: var(--uq-gold);
+    color: var(--uq-black);
+}
+.bg-blue {
+    background-color: var(--uq-blue);
+    color: var(--uq-white);
+}
+.bg-yellow {
+    background-color: var(--uq-yellow);
+    color: var(--uq-black);
+}
+.bg-orange {
+    background-color: var(--uq-orange);
+    color: var(--uq-black);
+}
+.bg-aqua {
+    background-color: var(--uq-aqua);
+    color: var(--uq-black);
+}
+	/* Neutral Colours */
+.bg-neutral {
+    background-color: var(--uq-neutral);
+    color: inherit;
+}
+.bg-dark-grey {
+    background-color: var(--uq-dark-grey);
+    color: var(--uq-black);
+}
+/* -------------------- */
 
+/* Backgrounds - Gradients */
 .bg-purple-gradient {
 	background: var(--uq-purple-gradient);
     color: var(--uq-white)!important;
@@ -201,27 +265,4 @@ a:hover {
 	background: var(--uq-postgrad-gradient);
     color: var(--uq-white)!important;
     padding: 10px;
-}
-
-.bg-light-purple {
-    background-color: var(--uq-light-purple);
-    color: var(--uq-white);
-    padding: 10px;
-}
-
-.bg-neutral {
-    background-color: var(--uq-neutral);
-    color: var(--uq-black);
-    padding: 10px;
-}
-.bg-neutral {
-    background-color: var(--uq-neutral);
-    color: var(--uq-black);
-    padding: 10px;
-}
-
-
-/* Old CSS - being deprecated */
-.white-font {
-    color: var(--uq-white)!important;
 }
