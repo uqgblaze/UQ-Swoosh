@@ -54,6 +54,7 @@ body {
     line-height: 1.6;
 }
 
+/* Default Heading Color */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: var(--font-bold);
@@ -265,4 +266,28 @@ a:hover {
 	background: var(--uq-postgrad-gradient);
     color: var(--uq-white)!important;
     padding: 10px;
+}
+
+/* Background-Based Heading Colors */
+.bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple, .bg-blue, .bg-purple-gradient, .bg-postgrad-gradient {
+    --heading-color: var(--uq-white);
+}
+
+.bg-green, .bg-red, .bg-gold, .bg-orange, .bg-aqua, .bg-dark-grey {
+    --heading-color: var(--uq-black);
+}
+
+/* Apply the Variable to Headings */
+.bg-purple h1, .bg-purple h2, .bg-purple h3, .bg-purple h4, .bg-purple h5, .bg-purple h6,
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black h4, .bg-black h5, .bg-black h6,
+.bg-light-purple h1, .bg-light-purple h2, .bg-light-purple h3, .bg-light-purple h4, .bg-light-purple h5, .bg-light-purple h6,
+.bg-dark-purple h1, .bg-dark-purple h2, .bg-dark-purple h3, .bg-dark-purple h4, .bg-dark-purple h5, .bg-dark-purple h6,
+.bg-blue h1, .bg-blue h2, .bg-blue h3, .bg-blue h4, .bg-blue h5, .bg-blue h6,
+.bg-green h1, .bg-green h2, .bg-green h3, .bg-green h4, .bg-green h5, .bg-green h6,
+.bg-red h1, .bg-red h2, .bg-red h3, .bg-red h4, .bg-red h5, .bg-red h6,
+.bg-gold h1, .bg-gold h2, .bg-gold h3, .bg-gold h4, .bg-gold h5, .bg-gold h6,
+.bg-orange h1, .bg-orange h2, .bg-orange h3, .bg-orange h4, .bg-orange h5, .bg-orange h6,
+.bg-aqua h1, .bg-aqua h2, .bg-aqua h3, .bg-aqua h4, .bg-aqua h5, .bg-aqua h6,
+.bg-dark-grey h1, .bg-dark-grey h2, .bg-dark-grey h3, .bg-dark-grey h4, .bg-dark-grey h5, .bg-dark-grey h6 {
+    color: var(--heading-color, var(--uq-purple));
 }
