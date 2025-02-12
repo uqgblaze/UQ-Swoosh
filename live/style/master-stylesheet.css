@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* UQ Branding CSS Variables */
+:root {
+    /* Primary Colours */
+    --uq-purple: #51247A; /* PMS 268 */
+    --uq-black: #000000;
+    --uq-white: #FFFFFF;
+    
+    /* Secondary Colours */
+    --uq-green: #2EA836; /* PMS 362 */
+    --uq-red: #E62645; /* PMS 193 */
+    --uq-light-purple: #962A8B; /* PMS 7656 */
+    --uq-gold: #BB9D65; /* PMS 465 */
+    --uq-dark-grey: #999490; /* PMS 408 */
+    --uq-yellow: #FBB800; /* PMS 143 */
+    --uq-orange: #EB602B; /* PMS 166 */
+    --uq-blue: #4085C6; /* PMS 2143 */
+    --uq-aqua: #00A2C7; /* PMS 7703 */
+    --uq-neutral: #D7D1CC; /* PMS 406 */
+    
+    /* Gradients */
+    --uq-purple-gradient: linear-gradient(to bottom, #51247A 0%, #962A8B 100%);
+    --uq-postgrad-gradient: linear-gradient(to bottom, #51247A 0%, #1F0029 100%);
+    
+    /* Typography */
+    --font-heading: 'Merriweather', 'Open Sans', sans-serif;
+    --font-body: 'Open Sans', 'Arial', sans-serif;
+    
+    /* Font Weights */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+}
+
+/* General Typography */
+body {
+    font-family: var(--font-body);
+    color: var(--uq-black);
+    background-color: var(--uq-white);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-bold);
+    color: var(--uq-purple);
+}
+
+p {
+    font-family: var(--font-body);
+    font-weight: var(--font-regular);
+    color: var(--uq-black);
+}
+
+/* Business School Differentiation */
+.undergraduate {
+    background: var(--uq-purple-gradient);
+    color: var(--uq-white);
+}
+
+.postgraduate {
+    background: var(--uq-postgrad-gradient);
+    color: var(--uq-white);
+}
+
+/* Buttons */
+.button {
+    background-color: var(--uq-purple);
+    color: var(--uq-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--uq-light-purple);
+}
+
+/* Links */
+a {
+    color: var(--uq-blue);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+}
+
+a:hover {
+    color: var(--uq-aqua);
+    text-decoration: underline;
+}
+
+/* Graphic Device */
+.graphic-device-left {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-curve_leftside.svg') no-repeat;
+    background-size: contain;
+}
+
+.graphic-device-right {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-flourish_rightside.svg') no-repeat;
+    background-size: contain;
+}
+
+/* UQ Logos */
+.uq-logo-purple {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo--purple.svg') no-repeat center;
+    background-size: contain;
+}
+
+.uq-logo-white {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo--white.svg') no-repeat center;
+    background-size: contain;
+}
+
+.uq-logo-stacked-purple {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo-Stacked--purple.svg') no-repeat center;
+    background-size: contain;
+}
+
+.uq-logo-stacked-white {
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo-Stacked--white.svg') no-repeat center;
+    background-size: contain;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: var(--font-bold);
+}
+
+.bg-purple {
+    background-color: var(--uq-purple);
+    color: var(--uq-white);
+    padding: 10px;
+}
+
+.bg-light-purple {
+    background-color: var(--uq-light-purple);
+    color: var(--uq-white);
+    padding: 10px;
+}
+
+.bg-neutral {
+    background-color: var(--uq-neutral);
+    color: var(--uq-black);
+    padding: 10px;
+}
+
