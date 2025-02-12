@@ -139,6 +139,18 @@ a:hover {
     padding: 10px;
 }
 
+.bg-purple-gradient {
+	background-color: var(--uq-purple-gradient);
+    color: var(--uq-white);
+    padding: 10px;
+}
+
+.bg-postgrad-gradient {
+	background-color: var(--uq-postgrad-gradient);
+    color: var(--uq-white);
+    padding: 10px;
+}
+
 .bg-light-purple {
     background-color: var(--uq-light-purple);
     color: var(--uq-white);
