@@ -276,7 +276,7 @@ a:hover {
 	color: var(--uq-white);
 }
 
-.bg-blue, .bg-green, .bg-red, .bg-gold, .bg-orange, .bg-aqua, .bg-dark-grey {
+.bg-blue, .bg-green, .bg-red, .bg-gold, .bg-orange, .bg-aqua, .bg-yellow, .bg-dark-grey {
     --heading-color: var(--uq-black);
 	color: var(--uq-black);
 }
@@ -292,6 +292,7 @@ a:hover {
 .bg-gold h1, .bg-gold h2, .bg-gold h3, .bg-gold h4, .bg-gold h5, .bg-gold h6,
 .bg-orange h1, .bg-orange h2, .bg-orange h3, .bg-orange h4, .bg-orange h5, .bg-orange h6,
 .bg-aqua h1, .bg-aqua h2, .bg-aqua h3, .bg-aqua h4, .bg-aqua h5, .bg-aqua h6,
+.bg-yellow h1, .bg-yellow h2, .bg-yellow h3, .bg-yellow h4, .bg-yellow h5, .bg-yellow h6,
 .bg-dark-grey h1, .bg-dark-grey h2, .bg-dark-grey h3, .bg-dark-grey h4, .bg-dark-grey h5, .bg-dark-grey h6, 
 .bg-purple-gradient h1, .bg-purple-gradient h2, .bg-purple-gradient h3, .bg-purple-gradient h4, .bg-purple-gradient h5, .bg-purple-gradient h6,
 .bg-purple-gradient-vertical h1, .bg-purple-gradient-vertical h2, .bg-purple-gradient-vertical h3, .bg-purple-gradient-vertical h4, .bg-purple-gradient-vertical h5, .bg-purple-gradient-vertical h6,
