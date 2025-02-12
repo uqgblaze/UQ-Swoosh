@@ -20,18 +20,18 @@
     --uq-neutral: #D7D1CC; /* PMS 406 */
     
     /* Gradients - Undergrad (aka purple) */
-    --uq-purple-gradient: linear-gradient(to bottom, #51247A 20%, #962A8B 80%);
-    --uq-purple-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
-    --uq-purple-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
-    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
-    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 20%, var(--uq-light-purple) 80%);
+    --uq-purple-gradient: linear-gradient(to bottom, #51247A 80%, #962A8B 100%);
+    --uq-purple-gradient-vertical: linear-gradient(to bottom, #51247A 80%, #962A8B 100%);
+    --uq-purple-gradient-horizontal: linear-gradient(to right, #51247A 80%, #962A8B 100%);
+    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
 	
 	/* Gradients - Postgrad (aka dark-purple) */
-	--uq-postgrad-gradient: linear-gradient(to bottom, #51247A 20%, #1F0029 70%);
-    --uq-postgrad-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 30%, var(--uq-dark-purple) 70%);
-    --uq-postgrad-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 20%, var(--uq-dark-purple) 80%);
-    --uq-postgrad-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 20%, var(--uq-dark-purple) 80%);
-    --uq-postgrad-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 20%, var(--uq-dark-purple) 80%);
+	--uq-postgrad-gradient: linear-gradient(to bottom, #51247A 70%, #1F0029 100%);
+    --uq-postgrad-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
 
 
 	
