@@ -247,23 +247,35 @@ a:hover {
 /* Backgrounds - Gradients */
 .bg-purple-gradient {
 	background: var(--uq-purple-gradient);
-    color: var(--uq-white)!important;
+    color: var(--uq-white);
+    padding: 10px;
+}
+.bg-purple-gradient-vertical {
+	background: var( --uq-purple-gradient-vertical);
+    color: var(--uq-white);
+    padding: 10px;
+}
+.bg-purple-gradient-horizontal {
+	background: var( --uq-purple-gradient-horizontal);
+    color: var(--uq-white);
     padding: 10px;
 }
 
 .bg-postgrad-gradient {
 	background: var(--uq-postgrad-gradient);
-    color: var(--uq-white)!important;
+    color: var(--uq-white);
     padding: 10px;
 }
 
 /* Background-Based Heading Colors */
 .bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple, .bg-blue, .bg-purple-gradient, .bg-postgrad-gradient {
     --heading-color: var(--uq-white);
+	color: var(--uq-white);
 }
 
 .bg-green, .bg-red, .bg-gold, .bg-orange, .bg-aqua, .bg-dark-grey {
     --heading-color: var(--uq-black);
+	color: var(--uq-black);
 }
 
 /* Apply the Variable to Headings */
@@ -278,7 +290,9 @@ a:hover {
 .bg-orange h1, .bg-orange h2, .bg-orange h3, .bg-orange h4, .bg-orange h5, .bg-orange h6,
 .bg-aqua h1, .bg-aqua h2, .bg-aqua h3, .bg-aqua h4, .bg-aqua h5, .bg-aqua h6,
 .bg-dark-grey h1, .bg-dark-grey h2, .bg-dark-grey h3, .bg-dark-grey h4, .bg-dark-grey h5, .bg-dark-grey h6, 
-.bg-purple-gradient h1, .bg-purple-gradient h2, .bg-purple-gradient h3, .bg-purple-gradient h4, .bg-purple-gradient h5, .bg-purple-gradient h6, 
+.bg-purple-gradient h1, .bg-purple-gradient h2, .bg-purple-gradient h3, .bg-purple-gradient h4, .bg-purple-gradient h5, .bg-purple-gradient h6,
+.bg-purple-gradient-vertical h1, .bg-purple-gradient-vertical h2, .bg-purple-gradient-vertical h3, .bg-purple-gradient-vertical h4, .bg-purple-gradient-vertical h5, .bg-purple-gradient-vertical h6,
+.bg-purple-gradient-horizontal h1, .bg-purple-gradient-horizontal h2, .bg-purple-gradient-horizontal h3, .bg-purple-gradient-horizontal h4, .bg-purple-gradient-horizontal h5, .bg-purple-gradient-horizontal h6,
 .bg-postgrad-gradient h1, .bg-postgrad-gradient h2, .bg-postgrad-gradient h3, .bg-postgrad-gradient h4, .bg-postgrad-gradient h5, .bg-postgrad-gradient h6 {
     color: var(--heading-color, var(--uq-purple));
 }
