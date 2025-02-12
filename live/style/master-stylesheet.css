@@ -190,20 +190,20 @@ a:hover {
 	/* Primary Colours */
 .bg-purple {
     background-color: var(--uq-purple);
-    color: var(--uq-white);
+    /* color: var(--uq-white); */
 }
 .bg-black {
     background-color: var(--uq-black);
-    color: var(--uq-white);
+    /* color: var(--uq-white); */
 }
 	/* Secondary Colours */
 .bg-light-purple {
     background-color: var(--uq-light-purple);
-    color: var(--uq-white);
+    /* color: var(--uq-white); */
 }
 .bg-dark-purple {
     background-color: var(--uq-dark-purple);
-    color: var(--uq-white);
+    /* color: var(--uq-white); */
 }
 .bg-green {
     background-color: var(--uq-green);
@@ -219,7 +219,7 @@ a:hover {
 }
 .bg-blue {
     background-color: var(--uq-blue);
-    color: var(--uq-white);
+    /* color: var(--uq-white); */
 }
 .bg-yellow {
     background-color: var(--uq-yellow);
@@ -278,14 +278,14 @@ a:hover {
 }
 
 /* Background-Based Heading Colors */
-.bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple, .bg-blue, 
+.bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple,  
 .bg-purple-gradient, .bg-purple-gradient-vertical, .bg-purple-gradient-horizontal, 
 .bg-postgrad-gradient, .bg-postgrad-gradient-vertical, .bg-postgrad-gradient-horizontal  {
     --heading-color: var(--uq-white);
 	color: var(--uq-white);
 }
 
-.bg-green, .bg-red, .bg-gold, .bg-orange, .bg-aqua, .bg-dark-grey {
+.bg-blue, .bg-green, .bg-red, .bg-gold, .bg-orange, .bg-aqua, .bg-dark-grey {
     --heading-color: var(--uq-black);
 	color: var(--uq-black);
 }
