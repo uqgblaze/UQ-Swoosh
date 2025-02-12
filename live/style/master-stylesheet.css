@@ -240,8 +240,36 @@ a:hover {
     background-color: var(--uq-neutral);
     color: inherit;
 }
+.bg-neutral20 {
+    background-color: var(--uq-neutral20);
+    color: inherit;
+}
+.bg-neutral40 {
+    background-color: var(--uq-neutral40);
+    color: inherit;
+}
+.bg-neutral60 {
+    background-color: var(--uq-neutral60);
+    color: inherit;
+}
+.bg-neutral80 {
+    background-color: var(--uq-neutral80);
+    color: inherit;
+}
 .bg-dark-grey {
     background-color: var(--uq-dark-grey);
+}
+.bg-dark-grey20 {
+    background-color: var(--uq-dark-grey20);
+}
+.bg-dark-grey40 {
+    background-color: var(--uq-dark-grey40);
+}
+.bg-dark-grey60 {
+    background-color: var(--uq-dark-grey60);
+}
+.bg-dark-grey80 {
+    background-color: var(--uq-dark-grey80);
 }
 .bg-white{
 	background-color: var(--uq-white);
