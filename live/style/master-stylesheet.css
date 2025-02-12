@@ -68,17 +68,6 @@ p {
 }
 
 
-/* Business School Differentiation */
-.undergraduate {
-    background: var(--uq-purple-gradient);
-    color: var(--uq-white);
-}
-
-.postgraduate {
-    background: var(--uq-postgrad-gradient);
-    color: var(--uq-white);
-}
-
 /* Buttons */
 .button {
     background-color: var(--uq-purple);
@@ -151,48 +140,48 @@ a:hover {
 /* Text Color Overrides */
    	/* Primary Colours */
 .text-purple{
-	color: var(--uq-purple);
+	color: var(--uq-purple)!important;
 }
 .text-white{
-	color: var(--uq-white);
+	color: var(--uq-white)!important;
 }
 .text-black{
-	color: var(--uq-black);
+	color: var(--uq-black)!important;
 }
 	/* Secondary Colours */
 .text-green{
-	color: var(--uq-green);
+	color: var(--uq-green)!important;
 }
 .text-red{
-	color: var(--uq-red);
+	color: var(--uq-red)!important;
 }
 .text-light-purple{
-	color: var(--uq-light-purple);
+	color: var(--uq-light-purple)!important;
 }
 .text-dark-purple{
-	color: var(--uq-dark-purple);
+	color: var(--uq-dark-purple)!important;
 }
 .text-gold{
-	color: var(--uq-gold);
+	color: var(--uq-gold)!important;
 }
 .text-yellow{
-	color: var(--uq-yellow);
+	color: var(--uq-yellow)!important;
 }
 .text-orange{
-	color: var(--uq-orange);
+	color: var(--uq-orange)!important;
 }
 .text-blue{
-	color: var(--uq-blue);
+	color: var(--uq-blue)!important;
 }
 .text-aqua{
-	color: var(--uq-aqua);
+	color: var(--uq-aqua)!important;
 }
 	/* Neutral Colours */
 .text-neutral{
-	color: var(--uq-neutral);
+	color: var(--uq-neutral)!important;
 }
 .text-dark-grey{
-	color: var(--uq-dark-grey);
+	color: var(--uq-dark-grey)!important;
 }
 /* -------------------- */
 
@@ -288,6 +277,9 @@ a:hover {
 .bg-gold h1, .bg-gold h2, .bg-gold h3, .bg-gold h4, .bg-gold h5, .bg-gold h6,
 .bg-orange h1, .bg-orange h2, .bg-orange h3, .bg-orange h4, .bg-orange h5, .bg-orange h6,
 .bg-aqua h1, .bg-aqua h2, .bg-aqua h3, .bg-aqua h4, .bg-aqua h5, .bg-aqua h6,
-.bg-dark-grey h1, .bg-dark-grey h2, .bg-dark-grey h3, .bg-dark-grey h4, .bg-dark-grey h5, .bg-dark-grey h6 {
+.bg-dark-grey h1, .bg-dark-grey h2, .bg-dark-grey h3, .bg-dark-grey h4, .bg-dark-grey h5, .bg-dark-grey h6, 
+.bg-purple-gradient h1, .bg-purple-gradient h2, .bg-purple-gradient h3, .bg-purple-gradient h4, .bg-purple-gradient h5, .bg-purple-gradient h6, 
+.bg-postgrad-gradient h1, .bg-postgrad-gradient h2, .bg-postgrad-gradient h3, .bg-postgrad-gradient h4, .bg-postgrad-gradient h5, .bg-postgrad-gradient h6 {
     color: var(--heading-color, var(--uq-purple));
 }
+/* -------------------- */
