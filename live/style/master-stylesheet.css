@@ -20,18 +20,18 @@
     --uq-neutral: #D7D1CC; /* PMS 406 */
     
     /* Gradients - Undergrad (aka purple) */
-    --uq-purple-gradient: linear-gradient(to bottom, #51247A 80%, #962A8B 100%);
-    --uq-purple-gradient-vertical: linear-gradient(to bottom, #51247A 80%, #962A8B 100%);
-    --uq-purple-gradient-horizontal: linear-gradient(to right, #51247A 80%, #962A8B 100%);
-    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
-    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient: linear-gradient(to bottom,#51247A 0%, #51247A 80%, #962A8B 100%);
+    --uq-purple-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
+    --uq-purple-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 0%, var(--uq-purple) 80%, var(--uq-light-purple) 100%);
 	
 	/* Gradients - Postgrad (aka dark-purple) */
 	--uq-postgrad-gradient: linear-gradient(to bottom, #51247A 70%, #1F0029 100%);
-    --uq-postgrad-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
-    --uq-postgrad-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
-    --uq-postgrad-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
-    --uq-postgrad-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-vertical: linear-gradient(to bottom, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-horizontal: linear-gradient(to right, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-diagonal-tl-br: linear-gradient(to bottom right, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
+    --uq-postgrad-gradient-diagonal-tr-bl: linear-gradient(to bottom left, var(--uq-purple) 0%, var(--uq-purple) 70%, var(--uq-dark-purple) 100%);
 
 
 	
@@ -82,6 +82,9 @@ p {
 
 .button:hover {
     background-color: var(--uq-light-purple);
+}
+.button:active {
+    background-color: var(--uq-dark-purple);
 }
 
 /* Links */
@@ -190,48 +193,37 @@ a:hover {
 	/* Primary Colours */
 .bg-purple {
     background-color: var(--uq-purple);
-    /* color: var(--uq-white); */
 }
 .bg-black {
     background-color: var(--uq-black);
-    /* color: var(--uq-white); */
 }
 	/* Secondary Colours */
 .bg-light-purple {
     background-color: var(--uq-light-purple);
-    /* color: var(--uq-white); */
 }
 .bg-dark-purple {
     background-color: var(--uq-dark-purple);
-    /* color: var(--uq-white); */
 }
 .bg-green {
     background-color: var(--uq-green);
-    color: var(--uq-black);
 }
 .bg-red {
     background-color: var(--uq-red);
-    color: var(--uq-black);
 }
 .bg-gold {
     background-color: var(--uq-gold);
-    color: var(--uq-black);
 }
 .bg-blue {
     background-color: var(--uq-blue);
-    /* color: var(--uq-white); */
 }
 .bg-yellow {
     background-color: var(--uq-yellow);
-    color: var(--uq-black);
 }
 .bg-orange {
     background-color: var(--uq-orange);
-    color: var(--uq-black);
 }
 .bg-aqua {
     background-color: var(--uq-aqua);
-    color: var(--uq-black);
 }
 	/* Neutral Colours */
 .bg-neutral {
@@ -240,7 +232,6 @@ a:hover {
 }
 .bg-dark-grey {
     background-color: var(--uq-dark-grey);
-    color: var(--uq-black);
 }
 /* -------------------- */
 
@@ -279,7 +270,7 @@ a:hover {
 
 /* Background-Based Heading Colors */
 .bg-purple, .bg-black, .bg-light-purple, .bg-dark-purple,  
-.bg-purple-gradient, .bg-purple-gradient, .bg-purple-gradient-vertical, .bg-purple-gradient-horizontal, 
+.bg-purple-gradient, .bg-purple-gradient-vertical, .bg-purple-gradient-horizontal, 
 .bg-postgrad-gradient, .bg-postgrad-gradient-vertical, .bg-postgrad-gradient-horizontal  {
     --heading-color: var(--uq-white);
 	color: var(--uq-white);
