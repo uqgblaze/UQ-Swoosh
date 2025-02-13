@@ -1,0 +1,36 @@
+.box-alert{
+  padding: 20px;
+  display: flex;
+ 	flex-direction: row;
+  flex-wrap: nowrap;
+	justify-content: flex-start;
+  border: 1px solid var(--uq-dark-grey, #0000000);
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+  .box-alert-svg{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .box-alert-text{
+	display: flex;
+	font-weight: bold;
+	width: 90%;
+}
+	.nomargin{
+		margin:0!important;
+		padding:0!important;
+	}
+
+	.statementd{
+		width: 100%;
+		background-color: var(--uq-neutral20);
+		display: flex;
+		margin: 10px 0;
+		padding: 40px 10%;
+		overflow: hidden;
+  }
