@@ -116,7 +116,7 @@ a:hover {
 }
 
 .graphic-device-right {
-    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-flourish_rightside.svg') no-repeat;
+    background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-flourish_rightside.svg') no-repeat bottom right;
     background-size: contain;
 }
 
