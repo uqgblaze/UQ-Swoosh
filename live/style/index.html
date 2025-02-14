@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UQ Branding Demo</title>
+    <link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/live/style/master-stylesheet.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+		code{
+			font-size: 14pt;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+		.color-blocks{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 100%;
+		}
+		.color-blocks .section{
+			width: 45%;
+		}
+		/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .color-blocks {
+    flex: 100%;
+	width: 100%;
+	margin: 10px;  
+  }
+}
+		.divider{
+			display: block;
+			height: 3px;
+			width: 100%;
+			border-top: 3px solid var(--uq-dark-grey);
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--uq-purple);
+        }
+        .header .uq-logo {
+            width: 150px;
+            height: auto;
+        }
+        .banner {
+            padding: 50px;
+            text-align: center;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+		.graphic-device{
+			position: relative;
+			width: 100%;
+			height: 300px; /* Adjust this based on your needs */
+			background-color: var(--uq-purple);
+			color: var(--uq-white);
+			border-radius: 5px 5px 0px 0px;
+			margin: 0;
+			padding: 0;
+			/* border: 3px solid red; /* for debugging */
+			overflow: hidden; /* Ensures no weird overflow issues */
+		}
+		.graphic-device-left{
+			position: absolute;
+    		bottom: -1px;
+			left: -1px;
+			width: 50%;
+			max-height: 75%;
+			height: 75%;
+			background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-curve_leftside.svg') no-repeat bottom left;
+			background-size: contain;
+		}
+		.graphic-device-right{
+			position: absolute;
+    		bottom: 0px;
+    		right: -1px;
+    		width: 50%;
+    		height: 40%;
+			background: url('https://uqgblaze.github.io/UQ-Swoosh/live/style/graphic-device-flourish_rightside.svg') no-repeat bottom right;
+    		background-size: contain;
+		}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="https://uqgblaze.github.io/UQ-Swoosh/live/style/uq-logo--white.svg" alt="UQ Logo" class="uq-logo">
+    </header>
+    
+    <section class="banner bg-neutral">
+        <h1>Welcome to the UQ Branding Demo</h1>
+        <p>Use the following magical stylesheet to speed up your on-brand production!</p>
+		<p><code>&lt;link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/live/style/master-stylesheet.css"&gt;</code></p>
+    </section>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Default setting - Body</h2>
+            <p><b>No background, no border.</b> This section follows the standard UQ branding guidelines. </p>
+        </section>
+
+		<div class="divider"></div>
+		
+		<section class="section bg-purple-gradient-vertical">
+            <h2>Vertical Undergraduate Gradient</h2>
+			<p><b>Color: </b><code>--uq-purple-gradient-vertical</code> <br /> 
+			   <b>Class: </b><code>bg-purple-gradient-vertical</code></p>
+			<p>Starts at 0% gradient, goes to 80%, then becomes light-purple.</p>
+        </section>
+
+		
+		<section class="section bg-purple-gradient-horizontal">
+            <h2>Horizontal Undergraduate Gradient</h2>
+			<p><b>Color: </b><code>--uq-purple-gradient-horizontal</code> <br /> 
+			   <b>Class: </b><code>bg-purple-gradient-horizontal</code></p>
+			<p>Starts at 0% gradient, goes to 80%, then becomes light-purple.</p>
+        </section>
+
+		<section class="section bg-postgrad-gradient-vertical">
+            <h2>Vertical Postgrad Gradient</h2>
+			<p><b>Color: </b><code>--uq-postgrad-gradient-vertical</code> <br /> 
+			   <b>Class: </b><code>bg-postgrad-gradient-vertical</code></p>
+			<p>Starts at 0% gradient, goes to 80%, then becomes light-purple.</p>
+        </section>
+		
+		<section class="section bg-postgrad-gradient-horizontal">
+            <h2>Horizontal Postgrad Gradient</h2>
+			<p><b>Color: </b><code>--uq-postgrad-gradient-horizontal</code> <br /> 
+			   <b>Class: </b><code>bg-postgrad-gradient-horizontal</code></p>
+			<p>Starts at 0% gradient, goes to 80%, then becomes light-purple.</p>
+        </section>
+		
+		<div class="divider"></div>
+		
+		
+		<div class="color-blocks">
+		<section class="section">
+            <h2>#51247A | {default} | {null}</h2>
+            <p><b>This is the default settings.</b> However, I have added a border: 1px solid #51247A; to denote the box. Notice how the style will revert back to this heading, including the headings. This was designed as a fail-safe to make this more user-friendly in case if no classes are declared. </p>
+        </section>
+		
+		<section class="section bg-white">
+            <h2>#FFFFFF | --uq-white | .bg-white</h2>
+			<p>This background includes a <code>border: 1px solid #51247A;</code> to denote the box. All other settings should be inherited.</p>
+        </section>
+		
+		<section class="section bg-purple">
+            <h2>#51247A | --uq-purple | .bg-purple</h2>
+            <p><b>bg-purple</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+        </section>
+		
+		<section class="section bg-black">
+            <h2>#000000 | --uq-black | .bg-black</h2>
+            <p><b>bg-black</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+        </section>
+		
+        <section class="section bg-light-purple">
+            <h2>#962A8B | --uq-light-purple | bg-light-purple</h2>
+            <p>Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+        </section>
+		
+		
+		<section class="section bg-green">
+            <h2>#2EA836 | --uq-green | bg-green</h2>
+            <p>Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+        </section>
+		
+		<section class="section bg-blue">
+            <h2>#4085C6 | --uq-blue | bg-blue</h2>
+            <p>Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+        </section>
+		
+		<section class="section bg-orange">
+  			<h2>#EB602B | --uq-orange | .bg-orange</h2>
+  			<p><b>bg-orange</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+		
+		<section class="section bg-yellow">
+		  <h2>#FBB800 | --uq-yellow | .bg-yellow</h2>
+		  <p><b>bg-yellow</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+
+		<section class="section bg-red">
+		  <h2>#E62645 | --uq-red | .bg-red</h2>
+		  <p><b>bg-red</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+		<section class="section bg-gold">
+		  <h2>#BB9D65 | --uq-gold | .bg-gold</h2>
+		  <p><b>bg-gold</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+
+		<section class="section bg-blue">
+		  <h2>#4085C6 | --uq-blue | .bg-blue</h2>
+		  <p><b>bg-blue</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+
+		<section class="section bg-aqua">
+		  <h2>#00A2C7 | --uq-aqua | .bg-aqua</h2>
+		  <p><b>bg-aqua</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+
+		<section class="section bg-neutral">
+		  <h2>#D7D1CC | --uq-neutral | .bg-neutral</h2>
+		  <p><b>bg-neutral</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+
+		<section class="section bg-dark-grey">
+		  <h2>#999490 | --uq-dark-grey | .bg-dark-grey</h2>
+		  <p><b>bg-dark-grey</b> | Body text is in Open Sans. <span class="text-bold">Headings use Open Sans too.</span></p>
+		</section>
+
+</div>
+		<div class="divider"></div>
+
+        <section class="section bg-neutral">
+            <h2>Buttons & Links</h2>
+            <button class="button">Primary Button</button>
+            <p><a href="#">This is a sample link</a></p>
+        </section>
+		
+		<section style="padding: 20px;"></section>
+
+        <section class="section bg-white">
+            <h2>Graphic Device</h2>
+			<div class="graphic-device">
+            <div class="graphic-device-left"></div>
+            <div class="graphic-device-right"></div>
+			</div>
+        </section>
+    </div>
+</body>
+</html>
