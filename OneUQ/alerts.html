@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alerts | UQ BIN</title>
+</head>
+
+<body>
+
+	
+<!-- UQ Central Design Style Sheets -->
+
+<link rel="stylesheet" media="all" href="https://uq.edu.au/sites/default/files/css/css_vIxFH_fWwTcuwWMhd5_BLAR0iFujYscXbVVgy7nOKwQ.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au/libraries/design-system/css/card.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au/libraries/design-system/css/hero.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au/libraries/design-system/css/button.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/global-alerts.css">	
+<link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/base.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/constants.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/global-oneuq.css" />
+<!-- //////////////////////// -->
+
+	
+<!-- Drupal Default CSS Stuff - I think? --
+<link rel="stylesheet" media="all" href="https://uq.edu.au/sites/default/files/css/css_Zp_6WZsNcHc_m9Faodp_Z86SvOPI_VfOa4lPTtphFX4.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au//sites/default/files/css/css_TM2tX55jHdFIJT8twzY2--5kAil11GeeQWukty7S5Tg.css" />
+<link rel="stylesheet" media="all" href="https://uq.edu.au//sites/default/files/css/css_SXGSvdxWIt7NrJF-U_4_EKfPFRkRMOlepmsE5Pat52s.css" />
+<!-- //////////////////////// -->	
+	
+	
+<link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/live/style/master-stylesheet.css">
+<link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/live/style/ultramask.css">
+<!-- <link rel="stylesheet" href="https://uqgblaze.github.io/UQ-Swoosh/live/style/bsan7200.css"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 1200,
+  offset: 20,		
+})
+</script>
+
+<!-- ### START HERO ANIMATED PURPLE ### -->	
+<div class="uq-hero-basic">
+  <div class="uq-container">
+    <div class="uq-hero-basic__content">
+      <h1 class="uq-hero-basic__title" data-aos="fade-right">
+        <span class="uq-hero-basic__eyebrow" data-aos="fade" data-aos-delay="1200">UQ BIN</span>
+        Alerts
+      </h1>    <span class="uq-hero-subheading" data-aos="fade" data-aos-delay="1400" data-aos-offset="10px">The alert components are used to notify users of important information or changes on a page attracting the user's attention without interrupting the user's task. The alerts are mainly categorised as page alerts and global alerts.</span>
+      </div>
+    </div>
+</div>
+<!-- Explanation -->
+<div class="uq-container">
+<h2>Page Alerts</h2>
+	<p>Page alerts are light variants of alerts that are used locally on pages along with components or on its own to notify users of important information or changes on a page.</p>
+	<p>This material has been adapted from: <a href="https://design-system.uq.edu.au/?path=/docs/components-alert--docs" target="_blank">https://design-system.uq.edu.au/?path=/docs/components-alert--docs</a></p>
+	<h3>To get started:</h3>
+	<p>Make sure that you have all of the CSS code linked into the page:</p>
+		<code style="padding: 1rem; display: block; background-color: var(--grey-50); border: 1px solid var(--grey-800); border-radius: .5rem;">
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/sites/default/files/css/css_vIxFH_fWwTcuwWMhd5_BLAR0iFujYscXbVVgy7nOKwQ.css" /&gt;<br>
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/libraries/design-system/css/card.css" /&gt;<br>
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/libraries/design-system/css/hero.css" /&gt;<br>
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/libraries/design-system/css/button.css" /&gt;<br>
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/global-alerts.css"&gt;<br>	
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/base.css" /&gt;<br>
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/constants.css" /&gt;<br>
+			&lt;link rel="stylesheet" media="all" href="https://uq.edu.au/styleguide/css/global-oneuq.css" /&gt;<br>
+		</code><br>
+	<p>If you want <strong>animations</strong>, then you'll also need to load in the animations CSS and Javascript too:</p>
+	<code style="padding: 1rem; display: block; background-color: var(--grey-50); border: 1px solid var(--grey-800); border-radius: .5rem;">
+		&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"&gt;<br>
+		&lt;script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"&gt;&lt;/script&gt;<br>
+		&lt;style&gt;<br>/* Hide scrollbar in Blackboard Ultra */<br>
+			body{overflow: hidden;overscroll-behavior: none;}<br>	
+		&lt;/style&gt;<br>
+		&lt;!-- Put the following at the <em>bottom</em> of the page before closing out the body --&gt;<br>
+		&lt;script&gt;<br>
+		  AOS.init({<br>
+		  duration: 1200,<br>
+		  offset: 20,<br>		
+		})<br>
+		&lt;/script&gt;
+	</code><br>	
+	<p>For more information about how the animation properties work, see AOS github repository: <a href="https://github.com/michalsnik/aos?tab=readme-ov-file" target="_blank">https://github.com/michalsnik/aos?tab=readme-ov-file</a>.</p><br>
+</div>	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<div class="uq-container">	
+<h2>Examples:</h2>	
+	<p>Please see the examples below:</p>
+<div class="uq-alert uq-alert--info" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;">
+  <div class="uq-alert__message">
+    <span>
+      <strong>uq-alert--info</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </span>
+  </div>
+</div>	
+<div class="styled-code" style="margin: 16px 32px 48px 32px; padding: 8px; border: 1px solid grey;">	
+<code>
+&lt;div class="uq-alert uq-alert--info" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;"><br>
+  &lt;div class="uq-alert__message"><br>
+    &lt;span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    &lt;/span><br>
+  &lt;/div><br>
+&lt;/div>	
+</code>
+</div>	
+ 
+	
+<div class="uq-alert uq-alert--success" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;">
+  <div class="uq-alert__message">
+    <span>
+      <strong>uq-alert--success</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </span>
+  </div>
+</div>
+<div class="styled-code" style="margin: 16px 32px 48px 32px; padding: 8px; border: 1px solid grey;">	
+<code>
+&lt;div class="uq-alert uq-alert--success" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;"><br>
+  &lt;div class="uq-alert__message"><br>
+    &lt;span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    &lt;/span><br>
+  &lt;/div><br>
+&lt;/div>	
+<br>
+</code>
+</div>		
+
+<div class="uq-alert uq-alert--warning" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;">
+  <div class="uq-alert__message">
+    <span>
+      <strong>uq-alert--warning</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </span>
+  </div>
+</div>
+<div class="styled-code" style="margin: 16px 32px 48px 32px; padding: 8px; border: 1px solid grey;">	
+<code>
+&lt;div class="uq-alert uq-alert--warning" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;"><br>
+  &lt;div class="uq-alert__message"><br>
+    &lt;span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    &lt;/span><br>
+  &lt;/div><br>
+&lt;/div>	
+<br>
+</code>
+</div>		
+
+<div class="uq-alert uq-alert--error" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;">
+  <div class="uq-alert__message">
+    <span>
+      <strong>uq-alert--error</strong>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </span>
+  </div>
+</div>
+<div class="styled-code" style="margin: 16px 32px 48px 32px; padding: 8px; border: 1px solid grey;">	
+<code>
+&lt;div class="uq-alert uq-alert--error" role="alert" data-aos="zoom-in" style="width: 80%; margin: 0 auto;"><br>
+  &lt;div class="uq-alert__message"><br>
+    &lt;span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    &lt;/span><br>
+  &lt;/div><br>
+&lt;/div>	
+<br>
+</code>
+</div>		
+</div>
+	
+</body>
+</html>
