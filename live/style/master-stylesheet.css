@@ -149,6 +149,9 @@ a:hover {
 .text-bold {
     font-weight: var(--font-bold);
 }
+.uq-hero-subheading{
+    color: var(--uq-dark-grey40);
+}
 
 /* Text Color Overrides */
    	/* Primary Colours */
