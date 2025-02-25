@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-9a2646c8-2d19-44c2-a645-fe8360a852f4" data-name="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="uuid-a099690d-4020-4ac8-831a-18b81c96674f" x1="612.99" y1="-1025.01" x2="188.01" y2="-1449.99" gradientTransform="translate(801 -837) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#51247a"/>
+      <stop offset=".2" stop-color="#4e2276"/>
+      <stop offset=".37" stop-color="#481e6c"/>
+      <stop offset=".53" stop-color="#3e165b"/>
+      <stop offset=".68" stop-color="#2f0b43"/>
+      <stop offset=".8" stop-color="#1f0029"/>
+    </linearGradient>
+  </defs>
+  <g id="uuid-a2cb3910-b532-41a6-8efb-08a80e8ddeaf" data-name="Icon--Live Session">
+    <circle cx="400.5" cy="400.5" r="300.5" fill="url(#uuid-a099690d-4020-4ac8-831a-18b81c96674f)"/>
+    <path d="M206.88,489.53v50.52c0,21.34,13.24,38.63,29.58,38.63h326.97c16.34,0,29.58-17.3,29.58-38.63v-50.52H206.88ZM570.93,540.05c0,4.92-3.06,8.92-6.83,8.92H236c-3.77,0-6.83-3.99-6.83-8.92h0v-27.79h113.2c2.91,8.96,9.62,14.8,17.07,14.86h81.12c7.45-.06,14.16-5.9,17.07-14.86h113.31v27.79Z" fill="#fff"/>
+    <path d="M263.76,248.38h273.04v211.43h22.75v-218.04c0-10.95-7.64-19.82-17.07-19.82h-284.42c-9.42,0-17.07,8.87-17.07,19.82v218.04h22.75v-211.43Z" fill="#fff"/>
+    <path d="M374.57,393c-2.94,0-5.33-2.38-5.33-5.33v-59.72c0-2.94,2.38-5.33,5.32-5.33.83,0,1.65.19,2.39.57l59.72,29.87c2.63,1.32,3.69,4.52,2.37,7.15-.51,1.02-1.35,1.86-2.37,2.37l-59.72,29.85c-.74.37-1.56.57-2.39.57ZM374.57,327.8l-.18.15v59.72l.26.15,59.72-29.82s.03-.11,0-.15l-59.8-30.05Z" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="8"/>
+  </g>
+</svg>

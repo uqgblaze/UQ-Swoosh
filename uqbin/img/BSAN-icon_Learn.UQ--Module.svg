@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-22bf0c36-845a-41f3-9537-22077e46ce8c" data-name="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="uuid-0a966da1-f30c-4afe-9e0d-7b7407880180" x1="612.99" y1="613.99" x2="188.01" y2="189.01" gradientTransform="translate(801 803) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#51247a"/>
+      <stop offset=".2" stop-color="#4e2276"/>
+      <stop offset=".37" stop-color="#481e6c"/>
+      <stop offset=".53" stop-color="#3e165b"/>
+      <stop offset=".68" stop-color="#2f0b43"/>
+      <stop offset=".8" stop-color="#1f0029"/>
+    </linearGradient>
+  </defs>
+  <g id="uuid-cfc38672-cca3-4256-a004-bd1d589190ce" data-name="Icon--Learn.UQ // Module">
+    <circle cx="400.5" cy="401.5" r="300.5" fill="url(#uuid-0a966da1-f30c-4afe-9e0d-7b7407880180)"/>
+    <path d="M580.78,273.84l-174.38-80.48c-3.57-1.65-7.69-1.65-11.27,0l-174.38,80.48c-4.75,2.2-7.79,6.97-7.78,12.21v228.03c-.01,5.24,3.03,10.01,7.78,12.21l174.38,80.48c3.57,1.65,7.69,1.65,11.27,0l174.38-80.48c4.75-2.2,7.79-6.97,7.78-12.21v-228.03c.01-5.24-3.03-10.01-7.78-12.21ZM400.77,220.32l142.32,65.73-142.32,65.73-142.32-65.73,142.32-65.73ZM239.81,306.97l147.55,68.14v198.52l-147.55-68.14v-198.52ZM414.18,573.63v-198.52l147.55-68.14v198.52l-147.55,68.14Z" fill="#fff"/>
+  </g>
+</svg>

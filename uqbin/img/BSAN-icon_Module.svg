@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-bf9c0ab1-e9a4-4651-9a72-eb6ddfba61c7" data-name="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <g id="uuid-8c25db86-bbe0-4cb0-a075-f7f872800c25" data-name="Icon--module">
+    <ellipse cx="399.4" cy="416.41" rx="227.4" ry="227.41" fill="none" stroke="#00a2c7" stroke-miterlimit="10" stroke-width="40"/>
+    <g>
+      <rect x="303.41" y="90.43" width="193.09" height="225" rx="24.32" ry="24.32" fill="#51247a"/>
+      <rect x="332.98" y="125.59" width="132.75" height="154.69" fill="#fff"/>
+    </g>
+    <g>
+      <rect x="124.14" y="488.95" width="193.09" height="225" rx="24.32" ry="24.32" fill="#51247a"/>
+      <rect x="153.7" y="524.11" width="132.75" height="154.69" fill="#fff"/>
+    </g>
+    <g>
+      <rect x="472.91" y="488.95" width="193.09" height="225" rx="24.32" ry="24.32" fill="#51247a"/>
+      <rect x="502.48" y="524.11" width="132.75" height="154.69" fill="#fff"/>
+    </g>
+  </g>
+</svg>

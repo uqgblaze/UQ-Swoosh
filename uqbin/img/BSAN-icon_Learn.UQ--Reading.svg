@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-d0e02897-9f92-476e-8247-31abde8e0897" data-name="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="uuid-99695405-40c9-4719-88a4-88fbb4a60d0d" x1="-1036.01" y1="2254.99" x2="-1460.99" y2="1830.01" gradientTransform="translate(-849 2443) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#51247a"/>
+      <stop offset=".2" stop-color="#4e2276"/>
+      <stop offset=".37" stop-color="#481e6c"/>
+      <stop offset=".53" stop-color="#3e165b"/>
+      <stop offset=".68" stop-color="#2f0b43"/>
+      <stop offset=".8" stop-color="#1f0029"/>
+    </linearGradient>
+  </defs>
+  <g id="uuid-4c635d2b-9814-4ca4-a17d-3fb4787583ca" data-name="Icon--Readings">
+    <circle cx="399.5" cy="400.5" r="300.5" fill="url(#uuid-99695405-40c9-4719-88a4-88fbb4a60d0d)"/>
+    <path d="M450.96,216h-185.78c-13.62.36-24.4,11.62-24.18,25.24v319.49c-.22,13.62,10.56,24.88,24.18,25.24h268.75c13.62-.36,24.4-11.62,24.18-25.24v-240.08l-107.16-104.65ZM446.99,248.9l79.28,77.96h-79.28v-77.96ZM267.43,559.54V242.43h158.56v105.7h105.7v211.41h-264.26Z" fill="#fff"/>
+  </g>
+</svg>

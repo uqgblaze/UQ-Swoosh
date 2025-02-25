@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-fac86c42-6a44-452a-8f08-abe224105540" data-name="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="uuid-8fdae4dc-1f1e-4964-9b69-ead967ba33ad" x1="-2688.51" y1="2257.99" x2="-3113.49" y2="1833.01" gradientTransform="translate(-2504 2443) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#51247a"/>
+      <stop offset=".2" stop-color="#4e2276"/>
+      <stop offset=".37" stop-color="#481e6c"/>
+      <stop offset=".53" stop-color="#3e165b"/>
+      <stop offset=".68" stop-color="#2f0b43"/>
+      <stop offset=".8" stop-color="#1f0029"/>
+    </linearGradient>
+  </defs>
+  <g id="uuid-f3260b95-079c-4297-8bbd-2afe91a4ae55" data-name="Icon--Learn.UQ // Assessment">
+    <circle cx="397" cy="397.5" r="300.5" fill="url(#uuid-8fdae4dc-1f1e-4964-9b69-ead967ba33ad)"/>
+    <path d="M527.72,249.96h-26.48v23.13h23.13v289.13h-254.43v-289.13h23.13v-23.13h-23.13c-11.06-1.6-21.33,6.07-22.93,17.13-.12.8-.18,1.6-.2,2.41v296.3c.06,10.86,8.92,19.61,19.78,19.54h261.14c10.86.06,19.71-8.69,19.78-19.54h0v-296.3c-.06-10.86-8.92-19.61-19.78-19.54,0,0,0,0,0,0Z" fill="#fff"/>
+    <path d="M489.67,276.91c-.06-14.86-12.09-26.88-26.95-26.95h-20.82c-6.34-24.75-31.54-39.68-56.29-33.34-16.37,4.19-29.15,16.97-33.34,33.34h-20.7c-14.86.06-26.88,12.09-26.95,26.95v42.44h185.04v-42.44ZM466.54,296.22h-138.78v-19.31c0-2.11,1.71-3.82,3.82-3.82h42.44v-11.57c0-12.77,10.36-23.13,23.13-23.13s23.13,10.36,23.13,23.13v11.57h42.44c2.11,0,3.82,1.71,3.82,3.82v19.31Z" fill="#fff"/>
+    <rect x="316.2" y="354.05" width="161.91" height="23.13" fill="#fff"/>
+    <rect x="316.2" y="400.31" width="161.91" height="23.13" fill="#fff"/>
+    <rect x="316.2" y="446.57" width="161.91" height="23.13" fill="#fff"/>
+    <rect x="316.2" y="492.83" width="161.91" height="23.13" fill="#fff"/>
+  </g>
+</svg>
