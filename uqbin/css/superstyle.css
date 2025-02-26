@@ -1,0 +1,20 @@
+/* superstyle.css */
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/base.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/drupal-base.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/card.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/hero.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/button.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/global-alerts.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/constants.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/global-oneuq.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/drupal-other-forms-dates.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/drupal-grids-footer-nav.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/drupal-buttons-icons.css");
+/* UQ Business School CSS */
+@import url("https://uqgblaze.github.io/UQ-Swoosh/live/style/master-stylesheet.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/live/style/ultramask.css");
+@import url("https://uqgblaze.github.io/UQ-Swoosh/uqbin/css/bsan.css");
+/* Animation AOS Stylesheet */
+@import url("https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css");
+
+/* You can add any custom styles below these imports */
