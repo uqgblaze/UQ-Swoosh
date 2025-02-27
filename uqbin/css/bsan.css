@@ -78,8 +78,11 @@
 			padding-top: 32px;
 			padding-bottom: 32px;
 		}
-
-/* -- call via: uq-icon--bsan--{icon-name} --*/
+/* -- Fix for the heroes, buttons having a url background color turning purple --*/
+.uq-hero-basic__back a:hover{background-color: transparent;}
+.uq-button {color: #fff;}
+.bb-link-hover {background-color: transparent!important;}
+/* -- call icons via: uq-icon--bsan--{icon-name} and add class 'uq-icon--light' to make all white --*/
 		.uq-icon--bsan--ethical-debate:before {
 			  content: "";
 			  display: inline-block;
