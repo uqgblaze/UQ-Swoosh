@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Profile Link Tester - Expanded Proxy Debugging</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    label { display: block; margin: 10px 0 5px; }
+    input[type="text"] { width: 90%; }
+    #result { margin-top: 20px; padding: 10px; background: #f0f0f0; }
+    #htmlOutput { margin-top: 20px; padding: 10px; background: #e0e0e0; max-height: 300px; overflow: auto; font-size: 0.9em; }
+    #debugLog { margin-top: 20px; padding: 10px; background: #d0d0d0; max-height: 200px; overflow: auto; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Course Profile Link Tester - Expanded Proxy Debugging</h1>
+  <p>
+    <strong>Note:</strong> For best results, please run this page from a web server rather than opening it as a local file.
+  </p>
+  <form id="courseForm">
+    <label for="courseUrl">Course URL:</label>
+    <input type="text" id="courseUrl" value="https://programs-courses.uq.edu.au/course.html?course_code=mgts7809">
+    
+    <label for="useProxy">
+      <input type="checkbox" id="useProxy" checked>
+      Use Proxy
+    </label>
+    
+    <button type="submit">Fetch Course Profile</button>
+  </form>
+  
+  <div id="result"></div>
+  <div id="htmlOutput"></div>
+  <div id="debugLog"></div>
+  
+  <script>
+    function logDebug(message) {
+      console.log(message);
+      const debugEl = document.getElementById("debugLog");
+      debugEl.innerText += message + "\n";
+    }
+    
+    // Utility function to fetch using a list of proxies sequentially
+    function fetchWithProxies(url, proxies) {
+      return new Promise((resolve, reject) => {
+        function tryNext(i) {
+          if (i >= proxies.length) {
+            reject(new Error("All proxies failed or returned an error."));
+          } else {
+            const fetchUrl = proxies[i] + encodeURIComponent(url);
+            logDebug("Trying proxy: " + fetchUrl);
+            fetch(fetchUrl)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error("Response not ok from proxy " + proxies[i]);
+                }
+                return response.text();
+              })
+              .then(text => {
+                if (text.includes("403 Forbidden") || text.includes("404 Not Found")) {
+                  logDebug("Proxy " + proxies[i] + " returned an error message. Trying next proxy...");
+                  tryNext(i + 1);
+                } else {
+                  resolve(text);
+                }
+              })
+              .catch(error => {
+                logDebug("Error with proxy " + proxies[i] + ": " + error.message);
+                tryNext(i + 1);
+              });
+          }
+        }
+        tryNext(0);
+      });
+    }
+    
+    document.getElementById("courseForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      // Clear previous logs
+      document.getElementById("debugLog").innerText = "";
+      
+      const urlInput = document.getElementById("courseUrl").value.trim();
+      const useProxy = document.getElementById("useProxy").checked;
+      
+      // List of proxies to try if proxy usage is enabled.
+      const proxies = [
+        "https://api.allorigins.win/raw?url=",
+        "https://thingproxy.freeboard.io/fetch/",
+        "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url="
+      ];
+      
+      document.getElementById("result").innerHTML = "<p>Loading...</p>";
+      document.getElementById("htmlOutput").innerHTML = "";
+      
+      // Use proxy if enabled
+      const fetchPromise = useProxy ? fetchWithProxies(urlInput, proxies) : fetch(urlInput).then(res => res.text());
+      
+      fetchPromise
+        .then(htmlText => {
+          logDebug("Fetched HTML length: " + htmlText.length);
+          document.getElementById("htmlOutput").innerText = htmlText;
+          
+          // Parse the fetched HTML
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlText, "text/html");
+          
+          // Utility: parse a dd/mm/yyyy string into a Date object
+          function parseDate(str) {
+            const parts = str.split('/');
+            return new Date(parts[2], parts[1] - 1, parts[0]);
+          }
+          
+          // Use today's actual date
+          let today = new Date();
+          logDebug("Today's date: " + today);
+          
+          // Log all elements with IDs starting with "course-offering-"
+          const courseOfferings = doc.querySelectorAll('[id^="course-offering-"]');
+          logDebug("Found " + courseOfferings.length + " course offering elements.");
+          
+          // Iterate through course offerings sequentially
+          function findCourseProfile() {
+            let i = 1;
+            let chosenLink = "";
+            while (true) {
+              const semEl = doc.getElementById(`course-offering-${i}-sem`);
+              const profileEl = doc.getElementById(`course-offering-${i}-profile`);
+              
+              // Stop iterating if no semester element is found
+              if (!semEl) {
+                logDebug("No course offering element found at index " + i);
+                break;
+              }
+              
+              const semText = semEl.textContent;
+              logDebug("Offering " + i + " text: " + semText);
+              
+              // Expected format: "Semester X, YYYY (dd/mm/yyyy - dd/mm/yyyy)"
+              const match = semText.match(/\((\d{2}\/\d{2}\/\d{4})\s*-\s*(\d{2}\/\d{2}\/\d{4})\)/);
+              if (match) {
+                const startDate = parseDate(match[1]);
+                const endDate = parseDate(match[2]);
+                const effectiveStartDate = new Date(startDate);
+                effectiveStartDate.setMonth(effectiveStartDate.getMonth() - 1);
+                
+                logDebug("Offering " + i + " start date: " + startDate);
+                logDebug("Offering " + i + " effective start date (1 month prior): " + effectiveStartDate);
+                logDebug("Offering " + i + " end date: " + endDate);
+                
+                // Check if today's date falls within [effectiveStartDate, endDate]
+                if (today >= effectiveStartDate && today <= endDate) {
+                  const anchor = profileEl ? profileEl.querySelector('a.profile-available') : null;
+                  if (anchor) {
+                    logDebug("Offering " + i + " matches date range and profile is available.");
+                    chosenLink = anchor.href;
+                    break;
+                  } else {
+                    logDebug("Offering " + i + " matches date range but profile is unavailable.");
+                  }
+                } else {
+                  logDebug("Offering " + i + " does not match the date range.");
+                }
+              } else {
+                logDebug("Offering " + i + " did not match the expected date range pattern.");
+              }
+              i++;
+            }
+            return chosenLink;
+          }
+          
+          const chosenLink = findCourseProfile();
+          
+          if (chosenLink) {
+            document.getElementById("result").innerHTML = "<p>Chosen Link: <a href='" + chosenLink + "' target='_blank'>" + chosenLink + "</a></p>";
+          } else {
+            document.getElementById("result").innerHTML = "<p>No valid course profile found based on the date range and availability.</p>";
+          }
+        })
+        .catch(error => {
+          document.getElementById("result").innerHTML = "<p>Error: " + error.message + "</p>";
+          logDebug("Fetch error: " + error.message);
+          console.error("Fetch error:", error);
+        });
+    });
+  </script>
+</body>
+</html>
